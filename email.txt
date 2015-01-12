@@ -1,0 +1,180 @@
+x-store-info: J++/JTCzmObr++wNraA4Pa4f5Xd6uensKMvPmf3fenenMFHzzPONLBBRx9g95j8H35UYKF/30DtPXECEWgTH7r1iWPN+/32/zki29g8Ps4n47LVaDS72eTU0UpwmfN9FDXQSsAFucAs6VnafnTz+XA==
+Authentication-Results: hotmail.com; spf=pass (sender IP is 208.64.202.37) smtp.mailfrom=noreply@steampowered.com; dkim=pass header.d=steampowered.com; x-hmca=pass header.id=noreply@steampowered.com
+X-SID-PRA: noreply@steampowered.com
+X-AUTH-Result: PASS
+X-SID-Result: PASS
+X-Message-Status: n:n
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTE7YT0xO0Q9MTtHRD0xO1NDTD0w
+X-Message-Info: NhFq/7gR1vQRHV6jbdvQfsKUeeVAoUVojAJS6DKEC2GNUUM0G+Idi/7lhnYtpKfYQrkvXrV/l4uO7Xn+L8P9lOzcPThV3fGLND9KXbSLOBA272OK5byxFLmxaSR55gdb3xbvkx57BsV3AgsERXAc15P1sfP5jA22m1YuDRQboqBFTXeWg5pSpMUxu3THe+quHMtvttXCFwzxc+/YdRlecy0RAEt+2yLU
+Received: from smtp01.steampowered.com ([208.64.202.37]) by SNT004-MC2F27.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.22751);
+	 Sun, 11 Jan 2015 17:36:18 -0800
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=steampowered.com; s=smtp;
+	h=Date:Message-Id:Content-Type:Subject:MIME-Version:Reply-To:From:To; bh=o2knYSvirjLWIBizyQ8wU0/6CD4DGNEB/IefGBYKBVs=;
+	b=uwIeng5QVCW9xgmtqCUkuj+Wi5tC7diLmmQC8RWXRl/oVCLwx5e7qSLkow7X3im/t6ktMUW/zVgimpwuS7R7U4DgOkFqYRrNfiNxF0TcUkGtOCw2xo9Or4b2F001H6agMaa6SB3z04ET/NVOTfkFrCshwrcBNJ6ENLACAkcyKlY=;
+Received: from [10.3.3.112] (helo=valvesoftware.com)
+	by smtp01.steampowered.com with smtp (Exim 4.76)
+	(envelope-from <noreply@steampowered.com>)
+	id 1YATnG-00076N-8P
+	for f.depaz@hotmail.com; Sun, 11 Jan 2015 17:27:46 -0800
+To: f.depaz@hotmail.com
+From: Steam Support <noreply@steampowered.com>
+Reply-To: <noreply@steampowered.com>
+X-Steam-Message-Type: Account Information Confirmation
+MIME-Version: 1.0
+Subject: Your Steam account: Access from new device
+Content-Type: multipart/alternative;
+	boundary="------------060908020109090601040503"
+Message-ID: <E1YATnG-00076N-8P@smtp01.steampowered.com>
+Date: Sun, 11 Jan 2015 17:27:46 -0800
+Return-Path: noreply@steampowered.com
+X-OriginalArrivalTime: 12 Jan 2015 01:36:19.0031 (UTC) FILETIME=[29D6E670:01D02E08]
+
+--------------060908020109090601040503
+Content-Type: text/plain; charset="UTF-8"; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+
+Dear yoshiscienceguy=2C=20
+
+Are you logging into Steam using a new browser or Steam app? Here's the Ste=
+am Guard code you'll need to complete the process: =20
+
+WV6X8
+
+If you haven=E2=80=99t recently tried to login to Steam from the device loc=
+ated at 174.77.55.217 (US)=2C someone else may be trying to access your acc=
+ount. You can view more info about this login attempt online.
+
+If you suspect someone else may be attempting to access your account=2C ple=
+ase either:
+
+- Change your password immediately or=20
+- Lock your account online and then request Support assistance to Regain ac=
+cess to your account.
+
+Here are the links you'll need:
+
+View more info about this login attempt
+https://steamcommunity.com/actions/ReportSuspiciousLogin?stoken=3D4e1d665c2=
+b660b190c1ba7eb9c47667840347e8fa507b95f6115c85ddfd2c332ebe7d1f060e49e005c4b=
+dd5cd31dded2
+
+Change your Steam password
+https://support.steampowered.com/kb_article.php?ref=3D8668-OSLM-5149=20
+
+Request your account be locked
+https://steamcommunity.com/actions/RequestAccountLock?stoken=3Dafe5d9b996cd=
+8c010241a9e824a7018dad3b5369d2eb95984600573224ed542c1caefc23a11b68b844639ca=
+835cdf300
+
+Request support to regain access to your locked account
+https://support.steampowered.com/newticket.php?category=3D11
+
+
+Thanks for helping us maintain the security of your account.
+
+
+The Steam Support Team
+https://support.steampowered.com=20
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+This notification has been sent to the email address associated with your S=
+team account.=20
+For information on Valve's privacy policy=2C visit http://www.valvesoftware=
+.com/privacy.htm.=20
+This email message was auto-generated. Please do not respond.
+
+=C2=A9 Valve Corporation. All rights reserved. All trademarks are property =
+of their respective=20
+owners in the US and other countries.
+
+
+--------------060908020109090601040503
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+	<meta http-equiv=3D"Content-Type" content=3D"text/html=3B charset=3Dutf-8"=
+>
+	<html>
+	<head>
+	<meta content=3D"text/html=3Bcharset=3DUTF-8" http-equiv=3D"Content-Type">
+	</head>
+		<body bgcolor=3D"#ffffff" text=3D"#000000" LINK=3D"#517ba4" ALINK=3D"#517=
+ba4" VLINK=3D"#517ba4">
+	=09
+		<span style=3D"font-size: 10px=3B background: #000000=3B color: #999999=
+=3B font-family: Trebuchet MS=2CVerdana=2CArial=2CHelvetica=2Csans-serif=3B=
+ lang=3D"x-western">
+		<img src=3D"http://cdn.akamai.steamstatic.com/steam/email/STEAM_mail.jpg"=
+ alt=3D"&nbsp=3BSTEAM&nbsp=3B" width=3D"430" height=3D"48" border=3D"0"><BR=
+>
+		</span>
+
+			<div style=3D"width: 430px=3B font-size: 11px=3B color: #333333=3B font-=
+family: Trebuchet MS=2CVerdana=2CArial=2CHelvetica=2Csans-serif=3B  lang=3D=
+"x-western">
+			<BR>
+			Dear yoshiscienceguy=2C <br>
+			<br>=20
+			Are you logging into Steam using a new browser or Steam app? Here=E2=80=
+=99s the Steam Guard code you=E2=80=99ll need to complete the process: <br>
+			<h2>WV6X8</h2>
+			<p><b>If you haven=E2=80=99t recently tried to login to Steam=E2=80=A6</=
+b> from the device located at 174.77.55.217 (<b>US</b>)=2C someone else may=
+ be trying to access your account. You can <a href=3D"https://steamcommunit=
+y.com/actions/ReportSuspiciousLogin?stoken=3D4e1d665c2b660b190c1ba7eb9c4766=
+7840347e8fa507b95f6115c85ddfd2c332ebe7d1f060e49e005c4bdd5cd31dded2">view mo=
+re info about this login attempt</a> online.</p>
+			<p>If you suspect someone else may be attempting to access your account=
+=2C please either:</p>
+			<ul>
+				<li><a href=3D"https://support.steampowered.com/kb_article.php?ref=3D86=
+68-OSLM-5149">Change your password immediately</a> or</li>	=09
+				<li><a href=3D"https://steamcommunity.com/actions/RequestAccountLock?st=
+oken=3Dafe5d9b996cd8c010241a9e824a7018dad3b5369d2eb95984600573224ed542c1cae=
+fc23a11b68b844639ca835cdf300">Lock your account online</a> and then <a href=
+=3D"https://support.steampowered.com/newticket.php?category=3D11">request S=
+upport assistance</a> to regain access to your account.</li>
+			</ul>
+			<p>Thanks for helping us  maintain the  security of your account.<BR>
+			<p>The Steam Support Team<br>
+			<a href=3D"https://support.steampowered.com">https://support.steampowere=
+d.com</a> <br>
+			<p></p>
+			<br>
+			<br>
+				<span style=3D"color: #333333=3B font-size: 9px=3B font-family: Trebuch=
+et MS=2C Verdana=2C Arial=2C Helvetica=2C sans-serif=3B">This notification =
+has been sent to the email address associated 	with your Steam account. <br=
+>
+				For information on Valve's privacy policy=2C visit <a href=3D"http://ww=
+w.valvesoftware.com/privacy.htm">http://www.valvesoftware.com/privacy.htm</=
+a>. <br>
+				This email message was auto-generated. Please do not respond.</span><br=
+>
+			<hr color=3D"#666666" align=3D"left" width=3D"420" size=3D"1" noshade>=09
+				<table width=3D"420" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+					<tr>
+						 <td><span style=3D"font-size: 10px=3B background: #FFFFFF=3B color: =
+#333333=3B font-family: Trebuchet MS=2CVerdana=2CArial=2CHelvetica=2Csans-s=
+erif=3B lang=3D"x-western"><img src=3D"http://cdn.akamai.steamstatic.com/st=
+eam/email/VALVE_mail.gif" alt=3D"VALVE" width=3D"91" height=3D"25"></span><=
+/td>
+						 <td width=3D"320"><span style=3D"color: #333333=3B font-size: 9px=3B=
+ font-family: Trebuchet MS=2C Verdana=2C Arial=2C Helvetica=2C sans-serif=
+=3B">&copy=3B Valve Corporation. All rights reserved. All trademarks are pr=
+operty of their respective owners in the US and other countries.</span></td=
+>
+					</tr>
+				</table>
+			</div>
+		</body>
+</html>
+
+
+--------------060908020109090601040503--

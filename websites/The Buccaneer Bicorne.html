@@ -1,0 +1,736 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<meta name="keywords" content="TF2, TF2 Trading, TF2WH, TF2WH Trading, Team Fortress 2, Buy and Sell TF2 items">
+<meta name="description" content="The TF2 Warehouse is a tf2 trading site where you can buy and sell virtual items from the Valve / Steam game Team Fortress 2 efficiently and safely through the use of a fleet of automated bots.">
+<meta name="author" content="TF2WH - TF2 Trading">
+<title>TF2 Warehouse - Item: The Buccaneer's Bicorne</title>
+<link rel="apple-itouch-icon" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+<link rel="stylesheet" href="/font-awesome.min.css">
+<link type="text/css" href="/style_1409969739_.css" rel="stylesheet" />
+<script type="text/javascript" src="/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="/jquery.svg.pack.js"></script>
+<!--[if IE 7]>
+  <link rel="stylesheet" href="/font-awesome-ie7.min.css">
+<![endif]-->
+<script type="text/javascript" src="/underscore-min.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26222697-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+var ftx_key = 'AajGxJMMyT9dHLRaW', ftx_id = ''
+!function() {var d=document,s=d.createElement('script')
+s.src='//fetrix.com.au/ftx.js'+(/__ftxd=([^;]+)/.test(d.cookie)?'?d='+RegExp.$1 :'')
+d.getElementsByTagName('head')[0].appendChild(s)}()
+
+var has_advert = true;
+function reheight() {
+  var main_height = $('.main').height(),
+      ticker_height = main_height - (has_advert ? 514 : 72 );
+	if(ticker_height < 378) {
+		var item = $('.item,.specialtrade,.ultimate,.search,.admin');
+		if (item.length > 0) {
+			item.height(item.height() + (378 - ticker_height));
+		}
+		ticker_height = 378;
+	}
+  $('.ticker').height(ticker_height);
+}
+
+$(reheight);
+$(function() { setInterval(reheight, 500);});
+
+var captchahash = false,
+	reserveitem = 0,
+	sdrate = 0;
+
+function captured(index) {
+	performReserve(index);
+}
+
+function performReserve(capidx, quantity) {
+	sdrate = 0;
+    $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
+        url: '//poll.tf2wh.com/ajaxz.php',
+        data: { reserve: reserveitem + (capidx?':' + captchahash + capidx:''), quantity: quantity},
+        success: function(data, textStatus) {
+            var title, text, html, haschrome = true,
+                result = 'Unknown error',
+                expire = 1;
+
+
+            if (data && data.commands && data.commands.reserve)
+                result = data.commands.reserve;
+
+            if (data && data.commands && data.commands.reserveexpire)
+                expire = data.commands.reserveexpire;
+
+            if (result == 'captchaneeded') {
+                title = 'Item requires a captcha.';
+                text = '';
+                html = "<img src='data:image/png;base64,"+data.captcha.image+"' usemap='#captcha' />";
+                haschrome = false;
+                captchahash = data.captcha.hash;
+            }
+            else if (result == 'reserveok') {
+                title = 'Item reserved';
+                text = 'Your item has been reserved' + (expire !== false ? ', click trade within ' + expire + ' hour' + (expire > 1 ? 's' : '') + ' to retrieve it, or it will return to sale. To cancel a reservation, visit your User Details page.' : '') + '.';
+            }
+            else if (result == 'wantok') {
+                title = 'I note your enthusiasm';
+                text = 'You are in the draw to receive this item now. The draw will take place at the end of the cooldown period and you will be notified by chat of the result.';
+            }
+            else {
+                title = 'Reservation error';
+                text = 'There was an error encountered while reserving your item: ' + result;
+            }
+
+            var alerttext = $('#ajax-alert-text'),
+                alerttitle = $('#ajax-alert-title');
+
+            alerttitle.text(title);
+            alerttext.text(text);
+
+            if (html) {
+                alerttext.html(
+                    alerttext.html() + html
+                );
+            }
+
+            if (!haschrome) {
+                alerttext.removeClass('alert');
+            }
+            else {
+                alerttext.addClass('alert');
+            }
+            $('#ajax-alert').fadeIn();
+        }
+    });
+}
+
+function showOfflineAlert() {
+	showCustomAlert('Store Offline', 'The store is currently offline, please try again later.');
+}
+function showFullAlert() {
+	showCustomAlert('Store Full', 'The store is currently full, and is not temporarily accepting new items.');
+}
+
+function showCustomAlert(title, text, isHtml, addClass) {
+  var dlg = $('#ajax-alert'),
+	  alerttext = $('#ajax-alert-text'),
+	  alerttitle = $('#ajax-alert-title');
+  alerttitle.text(title)
+
+  if (isHtml) alerttext.html(text);
+  else alerttext.text(text);
+
+  dlg.removeClass();
+  if (addClass) dlg.addClass(addClass);
+
+  alerttext.addClass('alert');
+  dlg.fadeIn();
+}
+$(function() {
+    var reserveClickCount = 0, reserveClickTimer = new Date().getTime(), errorSent = false;
+    $('.btnreserve').click(function() {
+        if ($(this).attr('quantity')) {
+            var quantity = $(this).attr('quantity');
+                            if ($("#statusBox").attr('status') !== 'offline') {
+                    reserveitem = $(this).attr('item');
+                    performReserve(null, quantity)
+                } else {
+                    showOfflineAlert();
+                }
+                    } else {
+            if ((new Date().getTime()-reserveClickTimer) >= 60000) {
+                reserveClickCount = 0;
+                reserveClickTimer = new Date().getTime();
+            } else {
+                reserveClickCount++;
+            }
+            if (reserveClickCount >= 300) {
+                reserveClickCount = 0;
+                reserveClickTimer = new Date().getTime();
+
+                if (errorSent == false) {
+                    $.ajax({
+                        type: 'POST',
+                        dataType: 'json',
+                        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        crossDomain: true,
+                        url: '//poll.tf2wh.com/ajaxz.php',
+                        data: { ajaxSpammer: true}
+                    });
+                    errorSent = true;
+                }
+            } else {
+                    var curStatus = $("#statusBox").attr('status');
+                if (curStatus !== 'offline') {
+                    reserveitem = $(this).attr('item');
+                    performReserve();
+                } else {
+                    showOfflineAlert();
+                }
+                }
+        }
+	});
+	$('.btnbuy').click(function() {
+		var curStatus = $("#statusBox").attr('status');
+		if (curStatus !== 'offline') {
+			sdrate = 0;
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+				xhrFields: {
+					withCredentials: true
+				},
+				crossDomain: true,
+				url: '//poll.tf2wh.com/ajaxz.php',
+				data: { savecmd: '!buy ' + $(this).attr('item') },
+			}).done(function ( data ) {
+				if (data && data.commands && data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+			});
+		}
+		else {
+			showOfflineAlert();
+		}
+	});
+	$('.btnsell').click(function() {
+        var element = document.getElementById("btnTrade").src,
+            imgEnabled = "/img/tf2wh-button-sell-v2.png",
+            imgDisabled = "/img/tf2wh-button-sell-v2-disabled.png";
+
+        var imgChecker=element.search(imgEnabled);
+        if (imgChecker > -1) {
+            console.log("Entered imgEnabled Loop...");
+		var curStatus = $("#statusBox").attr('status');
+		if (curStatus !== 'offline') {
+			if (curStatus === 'full') {
+				var reserved = Number($("#reserved").text());
+				if (reserved > 0) {
+					sdrate = 0;
+					$.ajax({
+						type: 'POST',
+						dataType: 'json',
+						contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+						xhrFields: {
+							withCredentials: true
+						},
+						crossDomain: true,
+						url: '//poll.tf2wh.com/ajaxz.php',
+						data: { savecmd: '!buy auto' }
+					}).done(function ( data ) {
+						if (data && data.commands && data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+					});
+				}
+				else {
+					showFullAlert();
+				}
+			}
+			else {
+				sdrate = 0;
+				$.ajax({
+					type: 'POST',
+					dataType: 'json',
+					contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+					xhrFields: {
+						withCredentials: true
+					},
+					crossDomain: true,
+					url: '//poll.tf2wh.com/ajaxz.php',
+					data: { savecmd: '!buy auto' }
+				}).done(function ( data ) {
+					if (data && data.commands && data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+				});
+			}
+		}
+		else {
+			showOfflineAlert();
+		}
+            imgDisabled = element.replace(imgEnabled, imgDisabled);
+            document.getElementById("btnTrade").src = imgDisabled;
+            document.getElementById("btnTrade").className = "btn btnsell btnTradeDisabled";
+            setTimeout(function() {
+                document.getElementById("btnTrade").src = element;
+                document.getElementById("btnTrade").className = "btn btnsell";
+            }, 30000);
+        }
+	});
+	$('.btncancel').click(function() {
+		var curStatus = $("#statusBox").attr('status');
+		if (curStatus !== 'offline') {
+			sdrate = 0;
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+				xhrFields: {
+					withCredentials: true
+				},
+				crossDomain: true,
+				url: '//poll.tf2wh.com/ajaxz.php',
+				data: { savecmd: '!cancel' }
+			}).done(function ( data ) {
+				if (data && data.commands && data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+			});
+		}
+		else {
+			showOfflineAlert();
+		}
+	});
+	$('.btncmd').click(function() {
+		var cmd = $(this).data('cmd');
+		var curStatus = $("#statusBox").attr('status');
+		if (curStatus !== 'offline') {
+			sdrate = 0;
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+				xhrFields: {
+					withCredentials: true
+				},
+				crossDomain: true,
+				url: '//poll.tf2wh.com/ajaxz.php',
+				data: { savecmd: '!' + cmd }
+			}).done(function ( data ) {
+				if (data && data.commands && data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+			});
+		}
+		else {
+			showOfflineAlert();
+		}
+	});
+	$('.btnclear').click(function() {
+		sdrate = 0;
+		$.ajax({
+			type: 'POST',
+			dataType: 'json',
+			contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+			xhrFields: {
+				withCredentials: true
+			},
+			crossDomain: true,
+			url: '//poll.tf2wh.com/ajaxz.php',
+			data: { clearreserve: true }
+		});
+	});
+
+
+
+
+});
+$(window).scroll(function(e){
+	var s = $(window).scrollTop(),
+		t = $('.ticker'),
+		y = t.offset().top;
+
+	if (y <= s) {
+		if (!t.is('.scrolling')) t.addClass('scrolling');
+	}
+	else {
+		if (t.is('.scrolling')) t.removeClass('scrolling');
+	}
+});
+</script>
+<map name="captcha">
+  <area shape="circle" coords="30,30,20" onclick="captured(0); return false;" href="#cap1" />
+  <area shape="circle" coords="90,30,20" onclick="captured(1); return false;" href="#cap2" />
+  <area shape="circle" coords="150,30,20" onclick="captured(2); return false;" href="#cap3" />
+  <area shape="circle" coords="210,30,20" onclick="captured(3); return false;" href="#cap4" />
+  <area shape="circle" coords="30,90,20" onclick="captured(4); return false;" href="#cap5" />
+  <area shape="circle" coords="90,90,20" onclick="captured(5); return false;" href="#cap6" />
+  <area shape="circle" coords="150,90,20" onclick="captured(6); return false;" href="#cap7" />
+  <area shape="circle" coords="210,90,20" onclick="captured(7); return false;" href="#cap8" />
+</map>
+<script type="text/javascript">
+var _sift = _sift || []; _sift.push(['_setAccount', '0652ee3f39']); _sift.push(['_setUserId', '']); _sift.push(['_trackPageview']); (function() { function ls() { var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true; e.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.siftscience.com/s.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); } if (window.attachEvent) { window.attachEvent('onload', ls); } else { window.addEventListener('load', ls, false); }})();
+</script>
+</head>
+<body>
+<!--div id="fireworks-template">
+ <div id="fw" class="firework"></div>
+ <div id="fp" class="fireworkParticle"><img src="/img/particles.gif" alt="" /></div>
+</div>
+
+<div id="fireContainer"></div-->
+<div class='page'>
+<div class='container'>
+	<div class='header'><a href='/' title='tf2wh.com'>TF2 Warehouse</a></div>
+	<div class='login'>
+<a href="/?login"><img src="/img/sits.png" width="128"/></a>	</div>
+	<div style="clear:both;"></div>
+</div>
+	<div id="nav">
+		<div class='social'>
+            <ul>
+				<li><a href="http://www.dota2ah.com"><span>DOTA2AH</span></a></li>
+				<li><a href="http://www.scrapwh.com"><span>SCRAPWH</span></a></li>
+                <li><a href='http://steamcommunity.com/groups/TF2WH' title='TF2WH Steam Group'><img src="/img/steamgroupbtn.png" alt="TF2WH Steam Group"></a></li>
+				<li><a href='/rss/' title='TF2WH Item RSS Feed'><img src="/img/rss.png" alt="TF2WH Item RSS Feed"></a></li>
+				<li><a href='https://twitter.com/tf2whBogon' title='TF2WH Twitter'><img src="/img/twit.png" alt="TF2WH Twitter"></a></li>
+                <li><a href='https://www.facebook.com/pages/TF2WH/152123401549603' title='TF2WH Facebook'><img src="/img/facebook.png" alt="TF2WH Facebook"></a></li>
+                <!-- FUTURE TODO <li><a href='#' title='TF2WH Google+'><img src="/img/google.png" alt="TF2WH Google+"></a></li> -->
+            </ul>
+        </div>
+		<div class="inbar">
+			<ul id="nav-menu">
+                <li><a href="/"><span>Home</span></a></li>
+                <li><a href="/allitems"><span>Item List</span></a></li>
+                <li><a href="/system"><span>Status</span></a></li>
+                <li><a><span>Market <b class="icon-caret-down"></b></span></a>
+                    <ul class="sub-list">
+                        <li class="sub-box two"><a href="/priceguide"><span>Price Guide</span></a></li>
+                        <li class="sub-box two"><a href="/overstock"><span>Stock</span></a></li>
+                        <li class="sub-box two"><a href="/changes"><span>Changes</span></a></li>
+                        <li class="sub-box two"><a href="/itemfeed"><span>Item Feed</span></a></li>
+                    </ul>
+                </li>
+                <li><a><span>Trading <b class="icon-caret-down"></b></span></a>
+                    <ul class="sub-list">
+                        <li class="sub-box three"><a href="/creditpurchase-new"><span>Credit purchasing</span></a></li>
+                                            </ul>
+                </li>
+                <li><a><span>My Account <b class="icon-caret-down"></b></span></a>
+                    <ul class="sub-list">
+                        <li class="sub-box"><a href="/trust"><span>Trust</span></a></li>
+                                            </ul>
+                </li>
+                <li><a><span>Help <b class="icon-caret-down"></b></span></a>
+                    <ul class="sub-list">
+                        <li class="sub-box"><a href="/help"><span>Videos</span></a></li>
+                        <li class="sub-box"><a href="http://forum.tf2wh.com"><span>Forums</span></a></li>
+                        <li class="sub-box"><a href="http://forum.tf2wh.com/pages/faq/"><span>FAQ</span></a></li>
+                    </ul>
+                </li>
+                <li><a><span>Links <b class="icon-caret-down"></b></span></a>
+                    <ul class="sub-list">
+                        <li class="sub-box two"><a href="http://www.scrapwh.com/" target="_blank"><span>ScrapWh.com</span></a></li>
+                        <li class="sub-box two"><a href="http://backpack.tf/" target="_blank"><span>Backpack.tf</span></a></li>
+                    </ul>
+                </li>
+				<li><a href="/ultimate"><span>Ultimate</span></a></li>			</ul>
+		</div>
+	</div>
+<div class='main'>
+	<div id="stats">
+		<b>Site status (10 min)</b>
+			742 users online,
+			2 in queue,
+			168 / 174 trades completed, avg wait 0 mins.
+<b style="color:#2FF369">96.6% success.</b>
+	</div>
+	<script>
+available_credits = "0";
+
+$('#stats').css({padding: '6px'}).svg({onLoad: function(s) {
+	var p = [0,5,1,1,7,4,6,3,2,4,5,1,2,8,3,3,1,2,4,3,2,6,2,4,2,5,5,1,1,2,4,4,3,3,3,3,3,2,2,2,6,2,1,1,4,4,2,2,4,4,3,0,1,7,1,3,2,0,2,1],
+		poly = [], i, n, m, h, e;
+
+	m = Math.max.apply(null, p);
+	n = p.length;
+
+	m++;
+	h = 20;
+	w = 1072;
+	e = $(s._svg);
+	e.height(h);
+	e.css({opacity: 0.5, marginBottom: '-6px',marginLeft: '-6px'});
+	poly.push([0,h]);
+	for (i = 0; i < n; i++) {
+		poly.push([i*w/(n-1),h-1-(p[i]*h/m)]);
+	}
+	poly.push([w,h]);
+	s.polygon(poly, {fill: '#2FF369'});
+}});
+
+
+	</script>
+		<!--	<div id="stats" style="font: 16px Verdana, Helvetica, Arial, sans-serif; padding-left: 10px; color: #FF7951; width: 1000px; height: 60px; text-align: left; clear: both">
+		<b>Steam Guard required for trading:</b> As of November 27th if you haven't turned on Steam Guard, your trading activities will be interrupted.  On December 12th, Valve will be restricting trades for accounts who have not had Steam Guard enabled for at least 15 days. If you want to keep trading continuously, activate it now.
+	</div> -->
+
+	<div id="statusBox" status="" style="display:none;">
+		<p id="statusMessage" style="display:none;">
+			Note:
+		</p>
+		<p id="statusOffline" style="display:none; font-size: 32px;">
+			Store Offline:
+		</p>
+		<p id="statusFull" style="display:none; font-size: 28px; margin-left: 128px; text-indent: 0;">
+            The bots are not currently accepting items but you may still purchase from us. We will begin accepting items again as soon as possible.
+		</p>
+		<p id='statusReason' style='color: #fff;font-size:18px;'></p>
+	</div>
+<script>
+var itemdef = "607;6;2696e208ecd3aa6310c44f5f48269c16",
+	lastContact, remain, itemState, buttonis, runningWant = false,
+	processWant = function initprocess() {
+		var now = +(new Date) / 1000,
+			run = now - lastContact,
+			secs = remain - run,
+			pre = "", post = " sec remain";
+
+		if ('undefined' === typeof itemState) {
+			runningWant = true;
+			setTimeout(processWant, 500);
+			$("#countdown").text("Loading...");
+			return;
+		}
+
+
+		if (itemState == 'wanting') {
+			pre = "Drawn in ";
+			post = " sec...";
+		}
+		else if (itemState != 'want') {
+			runningWant = false;
+			return;
+		}
+
+		if (secs < 0) {
+			$("#countdown").text("Please wait...");
+			runningWant = false;
+			return;
+		}
+
+		$("#countdown").text(pre + Math.ceil(secs) + post);
+		setTimeout(processWant, 500);
+		runningWant = true;
+	}
+	initbuy = function initbuy(servertime) {
+		processWant();
+	}
+
+	var oldStatus = "";
+	function procbuy(info) {
+		itemState = info.state;
+		lastContact = +(new Date) / 1000;
+		remain = info.remain;
+		price = info.price;
+		_price = info._price;
+		
+		if (itemState == 'want') {
+				if (buttonis != 'want') {
+						buttonis = 'want';
+						$("#buybutton").attr("src", "/img/tf2wh-button-wantit.png");
+						$("#buybutton").css("opacity", 1);
+						$(".btnspecific").css("opacity", 0.3);
+						$("#buyinfo").text('Click "Want It" to express your interest in the item, it will automatically be reserved for you if you win it. When an item is reserved, click the "Trade" button and a trade window will be opened then you will be offered the item. Upon successful completion your account will be deducted by <b style="color:yellow">' + _price + '</b> credits.');
+				}
+				if (!runningWant) processWant();
+		}
+		else if (itemState == 'wanting') {
+				if (buttonis != 'wanting') {
+						buttonis = 'wanting';
+						$("#buybutton").attr("src", "/img/tf2wh-button-wantit.png");
+						$("#buybutton").css("opacity", 0.3);
+						$(".btnspecific").css("opacity", 0.3);
+						$("#buyinfo").text('You have expressed your interest in the item, and it will automatically be reserved for you if you win it. When an item is reserved, click the "Trade" button and a trade window will be opened then you will be offered the item. Upon successful completion your account will be deducted by <b style="color:yellow">' + _price + '</b> credits.');
+				}
+				if (!runningWant) processWant();
+		}
+		else {
+				$("#buyinfo").html('If an item is reserved to you, when you click the "Trade" button, a trade window will be opened and you will be offered the item. Upon successful completion your account will be deducted by <b style="color:yellow">' + _price + '</b> credits. There are currently <b style="color:limegreen">' + info.available + '</b> of this item available.');
+				if (info.available < 1) {
+						$(".btnreserve").css("opacity", 0.3);
+				}
+				else {
+						$(".btnreserve").css("opacity", 1);
+				}
+
+				if (info.message) {
+						$("#countdown").text(info.message);
+				}
+
+				if (info.state == 'reserve') {
+						if (buttonis != 'reserve') {
+								$("#buybutton").attr("src", "/img/tf2wh-button-buy-v2.png");
+						}
+				}
+		}
+	var curStatus = $("#statusBox").attr('status');
+	if (curStatus !== oldStatus) {
+		oldStatus = curStatus;
+		if (curStatus !== 'offline') {
+			$("#buybutton").fadeIn();
+			$("#countdown").fadeIn();
+			$("#buyinfo").fadeIn();
+		}
+		else {
+			$("#buybutton").fadeOut();
+			$("#countdown").fadeOut();
+			$("#buyinfo").fadeOut();
+		}
+	}
+}
+</script>
+
+		<div class='item'>
+		<div class='itemdesc'>
+<h1 style='color: #7D6D00;'>The Buccaneer's Bicorne</h1>
+<b style='color:#777777'>Level 10 Hat</b><br/><h2 style='font-size: 16px;color:#777777'>Hoist the mainsail! Buckle those swashes! Get into a swordfight! Pirate captains yell stuff like this all the time, and now you can too.</h2>
+<h2 style='font-size: 16px;color:#777777'> </h2>
+<h2 style='font-size: 16px;color:#e1e10f'>Swashbuckler's Swag</h2>
+<h2 style='font-size: 16px;color:#777777'> </h2>
+<h2 style='font-size: 16px;color:#8b8989'>The Scottish Handshake</h2>
+<h2 style='font-size: 16px;color:#8b8989'>The Buccaneer's Bicorne</h2>
+<h2 style='font-size: 16px;color:#8b8989'>A Whiff of the Old Brimstone</h2>
+<h2 style='font-size: 16px;color:#8b8989'>The Bootlegger</h2>
+        <div style='float:left';>
+	<br/>
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-1449473034001623";
+	/* tf2wh_lb_item */
+	google_ad_slot = "6406031508";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+<p>Not so fast! You need to sign in through Steam to see additional information.</p>
+<p>Handy Hint: Click the green Steam button at the top!</p>
+        </div><div style='clear:both'></div>
+	</div>		</div>
+	</div>
+
+<div style='float:right;'>
+	<div class='searchWrap'>
+        <div class='find'>
+                <form action='/items'>
+                <input size='23' type='text' name='search' value=""/><input type='submit' value='Search'/>
+                </form>
+        </div>
+        </div>
+	<div class='bannerside'>
+	<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-1449473034001623";
+	/* tf2wh_med_sidebar */
+	google_ad_slot = "1976699507";
+	google_ad_width = 300;
+	google_ad_height = 250;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+	</div>
+	<div class='warehouseAd'>
+        <a href='/ultimate'><img src='/img/tf2wh-ultimatead.png' width='300' height='150' border='0' /></a>
+	</div>
+	<div class='ticker'>	</div>
+	</div>
+
+	<div class='footer'>
+		Disclaimer: This website is not related to Valve Corporation. Team Fortress 2, Steam and Valve are trademarks or registered trademarks of Valve Corporation. in the U.S. and/or other countries &middot;
+		<a href='http://steampowered.com'>Powered by Steam</a> &middot;
+		<a href='http://forum.tf2wh.com/pages/terms/'>Terms of Use</a> &middot;
+		<a href='http://norganna.com/privacy'>Privacy</a>
+	</div>
+	
+</div>
+<div id="ajax-alert">
+	<div id="ajax-alert-shim"></div>
+	<div id="ajax-alert-dialog">
+		<h2 id="ajax-alert-title">Title</h2>
+		<div id="ajax-alert-text" class="alert">Content</div>
+		<button onclick="$('#ajax-alert').hide();">Close</button>
+	</div>
+</div>
+<script>
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+function eraseCookie(name) {
+	createCookie(name,"",-1);
+}
+
+function playsound(name) {
+	var myAudio = new Audio();
+	if (myAudio && myAudio.canPlayType) {
+		$('#audio').children().remove();
+		$('#audio').append(myAudio);
+
+		if (myAudio.canPlayType('audio/ogg') != "") {
+			myAudio.src = '/sounds/'+name+'.ogg';
+			myAudio.load();
+			myAudio.play();
+			return
+		}
+		else if (myAudio.canPlayType('audio/mpeg') != "") {
+			myAudio.src = '/sounds/'+name+'.mp3';
+			myAudio.load();
+			myAudio.play();
+			return
+		}
+		else if (myAudio.canPlayType('audio/wav') != "") {
+			myAudio.src = '/sounds/'+name+'.wav';
+			myAudio.load();
+			myAudio.play();
+			return;
+		}
+	}
+}
+</script>
+<div id='audio'></div>
+<script type="text/javascript">
+  var _sf_async_config = { uid: 45377, domain: 'tf2wh.com' };
+  (function() {
+    function loadChartbeat() {
+      window._sf_endpt = (new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src',
+        (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+        "js/chartbeat.js");
+      document.body.appendChild(e);
+    };
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+      loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+</script>
+</body>
+</html>
