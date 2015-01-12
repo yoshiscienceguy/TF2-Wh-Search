@@ -5,8 +5,7 @@ from splinter import Browser
 import Email_Loader, Stock_Downloader, tf2search, Data_Grabber
 import time, operator
 from collections import defaultdict
-Login = 'https://steamcommunity.com/openid/login?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=checkid_setup&openid.return_to=http%3A%2F%2Fwww.tf2wh.com%2F%3Flogin&openid.realm=http%3A%2F%2Fwww.tf2wh.com&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select'
-Data ={"Login": "Yoshiscienceguy", "Password" : "123fernando123"}
+
 
         
 def printer(bots):
