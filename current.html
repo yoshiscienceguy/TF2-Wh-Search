@@ -1,0 +1,1179 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript" src="http://bam.nr-data.net/1/b592d4af42?a=7898246&amp;pl=1434570120419&amp;v=632.2b17625&amp;to=MVxVZxFUWhdZAhBbCwgWYkEKGl0QXQxKQgwW&amp;ap=170&amp;be=262&amp;fe=772&amp;dc=270&amp;f=%5B%22err%22,%22xhr%22,%22stn%22,%22ins%22%5D&amp;perf=%7B%22timing%22:%7B%22of%22:1434570120419,%22n%22:0,%22u%22:219,%22ue%22:222,%22dl%22:258,%22di%22:531,%22ds%22:531,%22de%22:556,%22dc%22:1032,%22l%22:1032,%22le%22:1034,%22f%22:1,%22dn%22:1,%22dne%22:1,%22c%22:1,%22ce%22:1,%22rq%22:2,%22rp%22:217,%22rpe%22:477%7D,%22navigation%22:%7B%7D%7D&amp;at=HRtCEVlOSUgaAEYIHxtE&amp;jsonp=NREUM.setToken"></script><script type="text/javascript" async="" src="http://cdn.siftscience.com/s.js"></script><script src="http://js-agent.newrelic.com/nr-632.min.js"></script><script async="" type="text/javascript" src="http://pagead2.googlesyndication.com/pub-config/ca-pub-1449473034001623.js"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQYCUVFWGwQIXVlQAwc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o&lt;n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&amp;&amp;t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f&gt;d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&amp;&amp;console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&amp;&amp;"function"==typeof console.log&amp;&amp;(i.console=!0,-1!==n.indexOf("dev")&amp;&amp;(i.dev=!0),-1!==n.indexOf("nr_dev")&amp;&amp;(i.nrDev=!0))}catch(a){}i.nrDev&amp;&amp;r.on("internal-error",function(t){e(t.stack)}),i.dev&amp;&amp;r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&amp;&amp;(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&amp;&amp;(t(1),t(2),"addEventListener"in window&amp;&amp;t(3),window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;!/CriOS/.test(navigator.userAgent)&amp;&amp;t(4),s=!0)}i.on("fn-start",function(){s&amp;&amp;(c+=1)}),i.on("fn-err",function(t,e,r){s&amp;&amp;(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&amp;&amp;!this.thrown&amp;&amp;c&gt;0&amp;&amp;(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&amp;&amp;window.performance.timing&amp;&amp;window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&amp;&amp;(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&amp;&amp;r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&amp;&amp;(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&amp;&amp;!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&amp;&amp;n(s);for(var c=XMLHttpRequest.prototype;c&amp;&amp;!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&amp;&amp;n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&amp;&amp;n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&amp;&amp;i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&amp;&amp;(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c&gt;i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&amp;&amp;(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&amp;&amp;(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&amp;&amp;t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&amp;&amp;t instanceof ArrayBuffer&amp;&amp;t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&amp;&amp;t instanceof Blob&amp;&amp;t.size)return t.size;if("undefined"!=typeof FormData&amp;&amp;t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&amp;&amp;"xpid"in NREUM.loader_config&amp;&amp;this.sameOrigin&amp;&amp;e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&amp;&amp;o){var f=n(o);f&amp;&amp;(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&amp;&amp;(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&amp;&amp;(i.onloadCalled||"function"!=typeof e.onload))&amp;&amp;i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c&gt;u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&amp;&amp;"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&amp;&amp;!this.xhrGuids[n]&amp;&amp;(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&amp;&amp;this.xhrGuids[n]&amp;&amp;(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;&amp;"load"===t[0]&amp;&amp;a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;&amp;"load"===t[0]&amp;&amp;a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&amp;&amp;("onload"===n&amp;&amp;(this.onload=!0),("load"===(t[0]&amp;&amp;t[0].type)||this.onload)&amp;&amp;(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&amp;&amp;a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&amp;&amp;o[1]&amp;&amp;(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&amp;&amp;"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&amp;&amp;(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&amp;&amp;e.port===n.port&amp;&amp;e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&amp;&amp;(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&amp;&amp;"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&amp;&amp;t.licenseKey&amp;&amp;t.applicationID&amp;&amp;e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&amp;&amp;o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&amp;&amp;(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&amp;&amp;(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0&gt;o?0:o);++r&lt;o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&amp;&amp;"function"==typeof t&amp;&amp;t.apply&amp;&amp;!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&amp;&amp;r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c&lt;r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&amp;&amp;Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&amp;&amp;(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script>
+<meta name="keywords" content="TF2, TF2 Trading, TF2WH, TF2WH Trading, Team Fortress 2, Buy and Sell TF2 items" />
+<meta name="description" content="The TF2 Warehouse is a tf2 trading site where you can buy and sell virtual items from the Valve / Steam game Team Fortress 2 efficiently and safely through the use of a fleet of automated bots." />
+<meta name="author" content="TF2WH - TF2 Trading" />
+<title>TF2 Warehouse - Item: The Toy Tailor</title>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+<link rel="stylesheet" href="/font-awesome.min.css" />
+<link type="text/css" href="/style_1434564958_.css" rel="stylesheet" />
+<script type="text/javascript" src="/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="/jquery.svg.pack.js"></script>
+<!--[if IE 7]>
+  <link rel="stylesheet" href="/font-awesome-ie7.min.css"/>
+<![endif]-->
+<script type="text/javascript" src="/underscore-min.js"></script>
+<script type="text/javascript">
+//&lt;![CDATA[
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26222697-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+var ftx_key = 'AajGxJMMyT9dHLRaW', ftx_id = '76561198041597639';
+!function() {var d=document,s=d.createElement('script');
+s.src='//fetrix.com.au/ftx.js'+(/__ftxd=([^;]+)/.test(d.cookie)?'?d='+RegExp.$1 :'');
+d.getElementsByTagName('head')[0].appendChild(s)}();
+
+var has_advert = true;
+function reheight() {
+  var main_height = $('.main').height(),
+      ticker_height = main_height - (has_advert ? 514 : 72 );
+	if(ticker_height &lt; 378) {
+		var item = $('.item,.specialtrade,.ultimate,.search,.admin');
+		if (item.length &gt; 0) {
+			item.height(item.height() + (378 - ticker_height));
+		}
+		ticker_height = 378;
+	}
+  $('.ticker').height(ticker_height);
+}
+
+$(reheight);
+$(function() { setInterval(reheight, 500);});
+
+var captchahash = false,
+	reserveitem = 0,
+	sdrate = 0;
+
+function captured(index) {
+	performReserve(index);
+}
+
+var is_reserving = false, reserve_timer = false;
+
+function updateReserveButton() {
+    $('body').toggleClass('reserving', is_reserving);
+}
+
+function performReserve(capidx, quantity) {
+	sdrate = 0;
+    if (is_reserving) return;
+
+    if (reserve_timer) clearTimeout(reserve_timer);
+    reserve_timer = setTimeout(function() {
+        is_reserving = false;
+        updateReserveButton();
+    }, 5000);
+
+    is_reserving = true;
+    updateReserveButton();
+    $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true,
+        url: '//poll.tf2wh.com/ajaxw.php',
+        data: { reserve: reserveitem + (capidx?':' + captchahash + capidx:''), quantity: quantity},
+        success: function(data, textStatus) {
+            var title, text, html, haschrome = true,
+                result = 'Unknown error',
+                expire = 1;
+
+            if (reserve_timer) clearTimeout(reserve_timer);
+            is_reserving = false;
+            updateReserveButton();
+
+            if (data &amp;&amp; data.commands &amp;&amp; data.commands.reserve)
+                result = data.commands.reserve;
+
+            if (data &amp;&amp; data.commands &amp;&amp; data.commands.reserveexpire)
+                expire = data.commands.reserveexpire;
+
+            if (result == 'captchaneeded') {
+                title = 'Item requires a captcha.';
+                text = '';
+                html = "&lt;img src='data:image/png;base64,"+data.captcha.image+"' usemap='#captcha' alt='captcha' /&gt;";
+                haschrome = false;
+                captchahash = data.captcha.hash;
+            }
+            else if (result == 'reserveok') {
+                title = 'Item reserved';
+                text = 'Your item has been reserved' + (expire !== false ? ', click trade within ' + expire + ' hour' + (expire &gt; 1 ? 's' : '') + ' to retrieve it, or it will return to sale. To cancel a reservation, visit your User Details page.' : '') + '.';
+            }
+            else if (result == 'wantok') {
+                title = 'I note your enthusiasm';
+                text = 'You are in the draw to receive this item now. The draw will take place at the end of the cooldown period and you will be notified by chat of the result.';
+            }
+            else {
+                title = 'Reservation error';
+                text = 'There was an error encountered while reserving your item: ' + result;
+            }
+
+            var alerttext = $('#ajax-alert-text'),
+                alerttitle = $('#ajax-alert-title');
+
+            alerttitle.text(title);
+            alerttext.text(text);
+
+            if (html) {
+                alerttext.html(
+                    alerttext.html() + html
+                );
+            }
+
+            if (!haschrome) {
+                alerttext.removeClass('alert');
+            }
+            else {
+                alerttext.addClass('alert');
+            }
+            $('#ajax-alert').fadeIn();
+        }
+    });
+}
+
+function showOfflineAlert() {
+	showCustomAlert('Store Offline', 'The store is currently offline, please try again later.');
+}
+function showFullAlert() {
+	showCustomAlert('Store Full', 'The store is currently full, and is not temporarily accepting new items.');
+}
+
+function showCustomAlert(title, text, isHtml, addClass) {
+  var dlg = $('#ajax-alert'),
+	  alerttext = $('#ajax-alert-text'),
+	  alerttitle = $('#ajax-alert-title');
+  alerttitle.text(title);
+
+  if (isHtml) alerttext.html(text);
+  else alerttext.text(text);
+
+  dlg.removeClass();
+  if (addClass) dlg.addClass(addClass);
+
+  alerttext.addClass('alert');
+  dlg.fadeIn();
+}
+$(function() {
+    var reserveClickCount = 0, reserveClickTimer = new Date().getTime(), errorSent = false;
+    $('.btnreserve').click(function() {
+        if ($(this).attr('quantity')) {
+            var quantity = $(this).attr('quantity');
+                            if ($("#statusBox").data('status') !== 'offline') {
+                    reserveitem = $(this).attr('item');
+                    performReserve(null, quantity)
+                } else {
+                    showOfflineAlert();
+                }
+                    } else {
+            if ((new Date().getTime()-reserveClickTimer) &gt;= 60000) {
+                reserveClickCount = 0;
+                reserveClickTimer = new Date().getTime();
+            } else {
+                reserveClickCount++;
+            }
+            if (reserveClickCount &gt;= 300) {
+                reserveClickCount = 0;
+                reserveClickTimer = new Date().getTime();
+
+                if (errorSent == false) {
+                    $.ajax({
+                        type: 'POST',
+                        dataType: 'json',
+                        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        crossDomain: true,
+                        url: '//poll.tf2wh.com/ajaxw.php',
+                        data: { ajaxSpammer: true}
+                    });
+                    errorSent = true;
+                }
+            } else {
+                    var curStatus = $("#statusBox").data('status');
+                if (curStatus !== 'offline') {
+                    reserveitem = $(this).attr('item');
+                    performReserve();
+                } else {
+                    showOfflineAlert();
+                }
+                }
+        }
+	});
+	$('.btnbuy').click(function() {
+		var curStatus = $("#statusBox").data('status');
+		if (curStatus !== 'offline') {
+			sdrate = 0;
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+				xhrFields: {
+					withCredentials: true
+				},
+				crossDomain: true,
+				url: '//poll.tf2wh.com/ajaxw.php',
+				data: { savecmd: '!buy ' + $(this).attr('item') }
+			}).done(function ( data ) {
+				if (data &amp;&amp; data.commands &amp;&amp; data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+			});
+		}
+		else {
+			showOfflineAlert();
+		}
+	});
+	$('.btnsell').click(function() {
+        var element = document.getElementById("btnTrade").src,
+            imgEnabled = "/img/tf2wh-button-sell-v2.png",
+            imgDisabled = "/img/tf2wh-button-sell-v2-disabled.png";
+
+        var imgChecker=element.search(imgEnabled);
+        if (imgChecker &gt; -1) {
+            console.log("Entered imgEnabled Loop...");
+		var curStatus = $("#statusBox").data('status');
+		if (curStatus !== 'offline') {
+			if (curStatus === 'full') {
+				var reserved = Number($("#reserved").text());
+				if (reserved &gt; 0) {
+					sdrate = 0;
+					$.ajax({
+						type: 'POST',
+						dataType: 'json',
+						contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+						xhrFields: {
+							withCredentials: true
+						},
+						crossDomain: true,
+						url: '//poll.tf2wh.com/ajaxw.php',
+						data: { savecmd: '!buy auto' }
+					}).done(function ( data ) {
+						if (data &amp;&amp; data.commands &amp;&amp; data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+					});
+				}
+				else {
+					showFullAlert();
+				}
+			}
+			else {
+				sdrate = 0;
+				$.ajax({
+					type: 'POST',
+					dataType: 'json',
+					contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+					xhrFields: {
+						withCredentials: true
+					},
+					crossDomain: true,
+					url: '//poll.tf2wh.com/ajaxw.php',
+					data: { savecmd: '!buy auto' }
+				}).done(function ( data ) {
+					if (data &amp;&amp; data.commands &amp;&amp; data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+				});
+			}
+		}
+		else {
+			showOfflineAlert();
+		}
+            imgDisabled = element.replace(imgEnabled, imgDisabled);
+            document.getElementById("btnTrade").src = imgDisabled;
+            document.getElementById("btnTrade").className = "btn btnsell btnTradeDisabled";
+            setTimeout(function() {
+                document.getElementById("btnTrade").src = element;
+                document.getElementById("btnTrade").className = "btn btnsell";
+            }, 30000);
+        }
+	});
+	$('.specific_bot_queue').click(function() {
+		var buy_cmd = '!buy bot '+$(this).data('account');
+        if (!$(this).hasClass('disabled')) {
+		var curStatus = $("#statusBox").data('status');
+		if (curStatus !== 'offline') {
+			if (curStatus === 'full') {
+				var reserved = Number($("#reserved").text());
+				if (reserved &gt; 0) {
+					sdrate = 0;
+					$.ajax({
+						type: 'POST',
+						dataType: 'json',
+						contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+						xhrFields: {
+							withCredentials: true
+						},
+						crossDomain: true,
+						url: '//poll.tf2wh.com/ajaxw.php',
+						data: { savecmd: buy_cmd }
+					}).done(function ( data ) {
+						if (data &amp;&amp; data.commands &amp;&amp; data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+					});
+				} else {
+					showFullAlert();
+				}
+			} else {
+				sdrate = 0;
+				$.ajax({
+					type: 'POST',
+					dataType: 'json',
+					contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+					xhrFields: {
+						withCredentials: true
+					},
+					crossDomain: true,
+					url: '//poll.tf2wh.com/ajaxw.php',
+					data: { savecmd: buy_cmd }
+				}).done(function ( data ) {
+					if (data &amp;&amp; data.commands &amp;&amp; data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+				});
+			}
+		} else {
+			showOfflineAlert();
+		}
+            $(this).addClass('disabled').css('opacity', '0.5');
+            setTimeout(function() {
+				$(this).removeClass('disabled').css('opacity', '1');
+            }, 30000);
+        }
+	});
+	$('.btncancel').click(function() {
+		var curStatus = $("#statusBox").data('status');
+		if (curStatus !== 'offline') {
+			sdrate = 0;
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+				xhrFields: {
+					withCredentials: true
+				},
+				crossDomain: true,
+				url: '//poll.tf2wh.com/ajaxw.php',
+				data: { savecmd: '!cancel' }
+			}).done(function ( data ) {
+				if (data &amp;&amp; data.commands &amp;&amp; data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+			});
+		}
+		else {
+			showOfflineAlert();
+		}
+	});
+	$('.btncmd').click(function() {
+		var cmd = $(this).data('cmd');
+		var curStatus = $("#statusBox").data('status');
+		if (curStatus !== 'offline') {
+			sdrate = 0;
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+				xhrFields: {
+					withCredentials: true
+				},
+				crossDomain: true,
+				url: '//poll.tf2wh.com/ajaxw.php',
+				data: { savecmd: '!' + cmd }
+			}).done(function ( data ) {
+				if (data &amp;&amp; data.commands &amp;&amp; data.commands.save !== 'ok') { showCustomAlert('Error', data.commands.save, false); }
+			});
+		}
+		else {
+			showOfflineAlert();
+		}
+	});
+	$('.btnclear').click(function() {
+		sdrate = 0;
+		$.ajax({
+			type: 'POST',
+			dataType: 'json',
+			contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+			xhrFields: {
+				withCredentials: true
+			},
+			crossDomain: true,
+			url: '//poll.tf2wh.com/ajaxw.php',
+			data: { clearreserve: true }
+		});
+	});
+
+
+
+
+
+});
+$(window).scroll(function(e){
+	var s = $(window).scrollTop(),
+		t = $('.ticker'),
+		o = t ? t.offset() : null,
+		y = o ? o.top : null;
+
+	if (y) {
+		if (y &lt;= s) {
+			if (!t.is('.scrolling')) t.addClass('scrolling');
+		}
+		else {
+			if (t.is('.scrolling')) t.removeClass('scrolling');
+		}
+	}
+});
+//]]&gt;
+</script><script src="//fetrix.com.au/ftx.js"></script>
+<script type="text/javascript">
+var _sift = _sift || []; _sift.push(['_setAccount', '0652ee3f39']); _sift.push(['_setUserId', '76561198041597639']); _sift.push(['_trackPageview']); (function() { function ls() { var e = document.createElement('script'); e.type = 'text/javascript'; e.async = true; e.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.siftscience.com/s.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); } if (window.attachEvent) { window.attachEvent('onload', ls); } else { window.addEventListener('load', ls, false); }})();
+</script>
+<!--
+<script type="text/javascript" src="/halloween-bats.js"></script>
+<script type="text/javascript" src="/lightning.js"></script>
+<script type="text/javascript" src="/snow.js"></script>
+-->
+
+</head>
+<body>
+<map name="captcha" id="captcha">
+	<area shape="circle" coords="30,30,20" onclick="captured(0); return false;" href="#cap1" alt="captcha" />
+	<area shape="circle" coords="90,30,20" onclick="captured(1); return false;" href="#cap2" alt="captcha" />
+	<area shape="circle" coords="150,30,20" onclick="captured(2); return false;" href="#cap3" alt="captcha" />
+	<area shape="circle" coords="210,30,20" onclick="captured(3); return false;" href="#cap4" alt="captcha" />
+	<area shape="circle" coords="30,90,20" onclick="captured(4); return false;" href="#cap5" alt="captcha" />
+	<area shape="circle" coords="90,90,20" onclick="captured(5); return false;" href="#cap6" alt="captcha" />
+	<area shape="circle" coords="150,90,20" onclick="captured(6); return false;" href="#cap7" alt="captcha" />
+	<area shape="circle" coords="210,90,20" onclick="captured(7); return false;" href="#cap8" alt="captcha" />
+</map>
+<!--div id="fireworks-template">
+ <div id="fw" class="firework"></div>
+ <div id="fp" class="fireworkParticle"><img src="/img/particles.gif" alt="" /></div>
+</div>
+
+<div id="fireContainer"></div-->
+<div class="page">
+<div class="container">
+	<div class="header"><a href="/" title="tf2wh.com">TF2 Warehouse</a></div>
+	<div class="login">
+<div class="overlay">
+	<a href="/userdetail" class="histlink">User Details</a>
+	<div class="held"><strong>Held:</strong><i id="userheld" class="priceline">0c</i></div>
+	<div class="available"><strong>Available:</strong><i id="userbalance" class="priceline">47,410c</i></div>
+
+	<div class="consigns">Consignments: 0</div>
+	<div class="trust" onclick="document.location = '/trust';">Trade level: 10<br />Verify level: 0</div>
+</div>
+<img src="/img/tf2wh-free-badge.png" align="right" width="24" height="24" alt="Free" /><table id="user">
+	<tbody><tr><td class="status" colspan="2"></td></tr>
+	<tr><td class="avatar"><img src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/9b/9b9a0a7e470e4f0c3dbf61a0025f22b9c4653735_medium.jpg" alt="Avatar" /></td><td class="detail" title="steamid: 76561198041597639">Sexy Beast<br />ID64: 76561198041597639<br /><a href="/?logout=1">Logout</a><br /></td></tr>
+</tbody></table>	</div>
+	<div style="clear:both;"></div>
+</div>
+	<div id="nav">
+		<div class="social">
+            <ul>
+				<li><a href="http://www.steamprepaid.com" style="margin-top: 2px;"><span>STEAMPREPAID</span></a></li>
+				<li><a href="http://www.scrapwh.com" style="margin-top: 2px;"><span>SCRAPWH</span></a></li>
+                <li><a href="http://steamcommunity.com/groups/TF2WH" title="TF2WH Steam Group"><img src="/img/steamgroupbtn.png" alt="TF2WH Steam Group" /></a></li>
+				<li><a href="/rss/" title="TF2WH Item RSS Feed"><img src="/img/rss.png" alt="TF2WH Item RSS Feed" /></a></li>
+				<li><a href="https://twitter.com/tf2wh" title="TF2WH News"><img src="/img/twit.png" alt="TF2WH News" /></a></li>
+                <li><a href="https://www.facebook.com/pages/TF2WH/152123401549603" title="TF2WH Facebook"><img src="/img/facebook.png" alt="TF2WH Facebook" /></a></li>
+                <!-- FUTURE TODO <li><a href='#' title='TF2WH Google+'><img src="/img/google.png" alt="TF2WH Google+"/></a></li> -->
+            </ul>
+        </div>
+		<div class="inbar">
+			<ul id="nav-menu">
+                <li><a href="/"><span>Home</span></a></li>
+                <li><a href="/allitems"><span>Item List</span></a></li>
+                <li><a href="/system"><span>Status</span></a></li>
+                <li><a><span>Market <strong class="icon-caret-down"></strong></span></a>
+                    <ul class="sub-list">
+                        <li class="sub-box two"><a href="/priceguide"><span>Price Guide</span></a></li>
+                        <li class="sub-box two"><a href="/changes"><span>Changes</span></a></li>
+                        <li class="sub-box two"><a href="/itemfeed"><span>Item Feed</span></a></li>
+                    </ul>
+                </li>
+                <li><a><span>Trading <strong class="icon-caret-down"></strong></span></a>
+                    <ul class="sub-list">
+                        <li class="sub-box three"><a href="/creditpurchase-new"><span>Credit purchasing</span></a></li>
+                                                <li class="sub-box three"><a href="/bulkhat"><span>Bulk hats</span></a></li>
+                        <li class="sub-box three"><a href="/consign"><span>Consign</span></a></li>
+                        <li class="sub-box three"><a href="/donate"><span>Donate</span></a></li>
+                                            </ul>
+                </li>
+                <li><a><span>My Account <strong class="icon-caret-down"></strong></span></a>
+                    <ul class="sub-list">
+                        <li class="sub-box"><a href="/trust"><span>Trust</span></a></li>
+                                                <li class="sub-box"><a href="/backpack"><span>Backpack</span></a></li>
+                        <li class="sub-box"><a href="/verification-new"><span>Verify</span></a></li>
+                                            </ul>
+                </li>
+                <li><a><span>Help <strong class="icon-caret-down"></strong></span></a>
+                    <ul class="sub-list">
+                        <li class="sub-box"><a href="/help"><span>Videos</span></a></li>
+                        <li class="sub-box"><a href="http://forum.tf2wh.com"><span>Forums</span></a></li>
+                        <li class="sub-box"><a href="http://forum.tf2wh.com/pages/faq/"><span>FAQ</span></a></li>
+                    </ul>
+                </li>
+                <li><a><span>Links <strong class="icon-caret-down"></strong></span></a>
+                    <ul class="sub-list">
+                        <li class="sub-box two"><a href="http://www.scrapwh.com/" target="_blank"><span>ScrapWh</span></a></li>
+                        <li class="sub-box two"><a href="http://www.steamprepaid.com/" target="_blank"><span>Steamprepaid</span></a></li>
+                    </ul>
+                </li>
+				<li><a href="/ultimate"><span>Ultimate</span></a></li>			</ul>
+		</div>
+	</div>
+<div class="main">
+	<div id="stats" class="hasSVG" style="padding: 6px;">
+		<strong>Site status (10 min)</strong>
+			466 users online,
+			3 in queue,
+			119 / 127 trades completed, avg wait 0 mins.
+<strong style="color:#2FF369">93.7% success.</strong>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="876" height="28" style="height: 20px; opacity: 0.5; margin-bottom: -6px; margin-left: -6px;"><polygon points="0,20 0,13.285714285714285 18.16949152542373,13.285714285714285 36.33898305084746,13.285714285714285 54.50847457627118,13.285714285714285 72.67796610169492,16.142857142857142 90.84745762711864,7.571428571428571 109.01694915254237,19 127.1864406779661,7.571428571428571 145.35593220338984,16.142857142857142 163.52542372881356,13.285714285714285 181.6949152542373,19 199.864406779661,10.428571428571429 218.03389830508473,13.285714285714285 236.20338983050848,16.142857142857142 254.3728813559322,13.285714285714285 272.54237288135596,19 290.7118644067797,7.571428571428571 308.8813559322034,16.142857142857142 327.0508474576271,7.571428571428571 345.22033898305085,16.142857142857142 363.3898305084746,7.571428571428571 381.5593220338983,19 399.728813559322,13.285714285714285 417.89830508474574,13.285714285714285 436.06779661016947,13.285714285714285 454.23728813559325,19 472.40677966101697,10.428571428571429 490.5762711864407,7.571428571428571 508.7457627118644,10.428571428571429 526.9152542372881,16.142857142857142 545.0847457627119,16.142857142857142 563.2542372881356,16.142857142857142 581.4237288135594,10.428571428571429 599.5932203389831,1.8571428571428577 617.7627118644068,7.571428571428571 635.9322033898305,7.571428571428571 654.1016949152543,10.428571428571429 672.271186440678,10.428571428571429 690.4406779661017,16.142857142857142 708.6101694915254,16.142857142857142 726.7796610169491,16.142857142857142 744.9491525423729,16.142857142857142 763.1186440677966,4.7142857142857135 781.2881355932203,10.428571428571429 799.457627118644,10.428571428571429 817.6271186440678,19 835.7966101694915,10.428571428571429 853.9661016949152,13.285714285714285 872.1355932203389,16.142857142857142 890.3050847457627,13.285714285714285 908.4745762711865,10.428571428571429 926.6440677966102,13.285714285714285 944.8135593220339,19 962.9830508474577,10.428571428571429 981.1525423728814,19 999.3220338983051,4.7142857142857135 1017.4915254237288,13.285714285714285 1035.6610169491526,19 1053.8305084745762,10.428571428571429 1072,13.285714285714285 1072,20" fill="#2FF369"/></svg></div>
+	<script type="text/javascript">
+	//&lt;![CDATA[
+available_credits = "0";
+
+$('#stats').css({padding: '6px'}).svg({onLoad: function(s) {
+	var p = [2,2,2,2,1,4,0,4,1,2,0,3,2,1,2,0,4,1,4,1,4,0,2,2,2,0,3,4,3,1,1,1,3,6,4,4,3,3,1,1,1,1,5,3,3,0,3,2,1,2,3,2,0,3,0,5,2,0,3,2],
+		poly = [], i, n, m, h, e;
+
+	m = Math.max.apply(null, p);
+	n = p.length;
+
+	m++;
+	h = 20;
+	w = 1072;
+	e = $(s._svg);
+	e.height(h);
+	e.css({opacity: 0.5, marginBottom: '-6px',marginLeft: '-6px'});
+	poly.push([0,h]);
+	for (i = 0; i &lt; n; i++) {
+		poly.push([i*w/(n-1),h-1-(p[i]*h/m)]);
+	}
+	poly.push([w,h]);
+	s.polygon(poly, {fill: '#2FF369'});
+}});
+
+   //]]&gt;
+	</script>
+		
+	<div id="statusBox" data-status="" class="status-message">
+		<p id="statusOffline" style="display:none; font-size: 32px; margin-left: 128px; text-indent: 0;">Store Offline:</p>
+		<p id="statusFull" style="display:none; font-size: 28px; margin-left: 128px; text-indent: 0;">The bots are not currently accepting items but you may still purchase from us. We will begin accepting items again as soon as possible.</p>
+		<div id="statusReason" style="color: #fff;font-size:18px;">
+		<div style="margin-top: 29px;"><center>Steam Summer Sale has begun! That means fun and games and Steam problems!<br />Your patience is appreciated.</center></div></div>
+	</div>
+<script type="text/javascript">
+//&lt;![CDATA[
+var itemdef = "30327;6;2f6d4e2650ee315d7104c6943e04fda6",
+	lastContact, remain, itemState, buttonis, runningWant = false,
+	processWant = function initprocess() {
+		var now = +(new Date) / 1000,
+			run = now - lastContact,
+			secs = remain - run,
+			pre = "", post = " sec remain";
+
+		if ('undefined' === typeof itemState) {
+			runningWant = true;
+			setTimeout(processWant, 500);
+			$("#countdown").text("Loading...");
+			return;
+		}
+
+
+		if (itemState == 'wanting') {
+			pre = "Drawn in ";
+			post = " sec...";
+		}
+		else if (itemState != 'want') {
+			runningWant = false;
+			return;
+		}
+
+		if (secs &lt; 0) {
+			$("#countdown").text("Please wait...");
+			runningWant = false;
+			return;
+		}
+
+		$("#countdown").text(pre + Math.ceil(secs) + post);
+		setTimeout(processWant, 500);
+		runningWant = true;
+	}
+	initbuy = function initbuy(servertime) {
+		processWant();
+	}
+
+	var oldStatus = "";
+	function procbuy(info) {
+		itemState = info.state;
+		lastContact = +(new Date) / 1000;
+		remain = info.remain;
+		price = info.price;
+		_price = info._price;
+		
+		if (itemState == 'want') {
+				if (buttonis != 'want') {
+						buttonis = 'want';
+						$("#buybutton").attr("src", "/img/tf2wh-button-wantit.png");
+						$("#buybutton").css("opacity", 1);
+						$(".btnspecific").css("opacity", 0.3);
+						$("#buyinfo").text('Click "Want It" to express your interest in the item, it will automatically be reserved for you if you win it. When an item is reserved, click the "Trade" button and a trade window will be opened then you will be offered the item. Upon successful completion your account will be deducted by &lt;strong style="color:yellow"&gt;' + _price + '&lt;/strong&gt; credits.');
+				}
+				if (!runningWant) processWant();
+		}
+		else if (itemState == 'wanting') {
+				if (buttonis != 'wanting') {
+						buttonis = 'wanting';
+						$("#buybutton").attr("src", "/img/tf2wh-button-wantit.png");
+						$("#buybutton").css("opacity", 0.3);
+						$(".btnspecific").css("opacity", 0.3);
+						$("#buyinfo").text('You have expressed your interest in the item, and it will automatically be reserved for you if you win it. When an item is reserved, click the "Trade" button and a trade window will be opened then you will be offered the item. Upon successful completion your account will be deducted by &lt;strong style="color:yellow"&gt;' + _price + '&lt;/strong&gt; credits.');
+				}
+				if (!runningWant) processWant();
+		}
+		else {
+				$("#buyinfo").html('If an item is reserved to you, when you click the "Trade" button, a trade window will be opened and you will be offered the item. Upon successful completion your account will be deducted by &lt;strong style="color:yellow"&gt;' + _price + '&lt;/strong&gt; credits. There are currently &lt;strong style="color:limegreen"&gt;' + info.available + '&lt;/strong&gt; of this item available.');
+				if (info.available &lt; 1) {
+						$(".btnreserve").css("opacity", 0.3);
+				}
+				else {
+						$(".btnreserve").css("opacity", 1);
+				}
+
+				if (info.message) {
+						$("#countdown").text(info.message);
+				}
+
+				if (info.state == 'reserve') {
+						if (buttonis != 'reserve') {
+								$("#buybutton").attr("src", "/img/tf2wh-button-buy-v2.png");
+						}
+				}
+		}
+	var curStatus = $("#statusBox").data('status');
+	if (curStatus !== oldStatus) {
+		oldStatus = curStatus;
+		if (curStatus !== 'offline') {
+			$("#buybutton").fadeIn();
+			$("#countdown").fadeIn();
+			$("#buyinfo").fadeIn();
+		}
+		else {
+			$("#buybutton").fadeOut();
+			$("#countdown").fadeOut();
+			$("#buyinfo").fadeOut();
+		}
+	}
+}
+//]]&gt;
+</script>
+
+		<div class="item">
+		<div class="itemdesc">
+<h1 style="color: #7D6D00;">The Toy Tailor</h1>
+<strong style="color:#777777">Level 72 Hat</strong><br /><h2 style="font-size: 16px;color:#7ea9d1">Crafted by [DFS] Roope [FIN]</h2>
+<p id="buyinfo">If an item is reserved to you, when you click the "Trade" button, a trade window will be opened and you will be offered the item. Upon successful completion your account will be deducted by <strong style="color:yellow">3,500</strong> credits. There are currently <strong style="color:limegreen">121</strong> of this item available.</p><p>Stock levels: At the moment we have 121 units of this item in our inventory. We will only accept up to 125 in total (stock level 96%)</p>        <div>
+        <script type="text/javascript">&lt;!--
+        google_ad_client = "ca-pub-1449473034001623";
+        /* tf2wh_lb_item */
+        google_ad_slot = "6406031508";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //--&gt;
+        </script>
+        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+        </div><br />
+			<style>
+	.lnk-bptf {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background-image: url(/img/bptf-icon.png);
+	}
+	.lnk-tf2i {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background-image: url(/img/tf2i-icon.png);
+	}
+	</style>
+	<div class="buybox" style="float:left;">
+	<h2 style="color: skyblue;">Specific variants (+2.5% extra fee)</h2>
+        <small>(as at page load, not updated live)</small>
+        <p>	<img class="btn btnspecific btnreserve" item="55364c757951433cc6848065" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3014953585">The Toy Tailor</span>, Level 83 Hat, on aliasalien<br />
+	<img class="btn btnspecific btnreserve" item="54e373097951433cc6698e58" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3514077167">The Toy Tailor</span>, Level 26 Hat, on apocalypticapple<br />
+	<img class="btn btnspecific btnreserve" item="554aa448510ca17ece54a09e" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2241471696">The Toy Tailor</span>, Level 97 Hat, on bangingbanana<br />
+	<img class="btn btnspecific btnreserve" item="5563426d233270344826c257" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2455421048">The Toy Tailor</span>, Level 56 Hat, on beautifulbutterfly<br />
+	<img class="btn btnspecific btnreserve" item="553978a47951433cc6855d38" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2866216317">The Toy Tailor</span>, Level 88 Hat, on bizarreburger<br />
+	<img class="btn btnspecific btnreserve" item="5503a1bf7951433cc673bfaf" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2987636546">The Toy Tailor</span>, Hat, on colossalcabbage<br />
+	<img class="btn btnspecific btnreserve" item="541a893a7951433cc638a97d" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2866232411">The Toy Tailor</span>, Level 9 Hat, on creepycarrot<br />
+	<img class="btn btnspecific btnreserve" item="555f0e9aeaeead568bee1bf0" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3786236881">The Toy Tailor</span>, Level 52 Hat, by MR Doge_Sniper, on creepycarrot<br />
+	<img class="btn btnspecific btnreserve" item="551fdfe17951433cc67cb2fc" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3505759861">The Toy Tailor</span>, Level 95 Hat, on damagingdrum<br />
+	<img class="btn btnspecific btnreserve" item="54fbde897951433cc6718ceb" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3548150898">The Toy Tailor</span>, Level 82 Hat, on deadlydoctor<br />
+	<img class="btn btnspecific btnreserve" item="552bd4d07951433cc68101f1" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3112061508">The Toy Tailor</span>, Level 66 Hat, on deadlydoctor<br />
+	<img class="btn btnspecific btnreserve" item="5540a3783c5b6144484a10b1" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2318454183">The Toy Tailor</span>, Level 38 Hat, by \__DG__/, on dervishdevil<br />
+	<img class="btn btnspecific btnreserve" item="5573236ec8414b91799bdfc5" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2197639073">The Toy Tailor</span>, Level 98 Hat, on dervishdevil<br />
+	<img class="btn btnspecific btnreserve" item="5573236ec8414b91799bdfc6" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3285609552">The Toy Tailor</span>, Level 24 Hat, on dervishdevil<br />
+	<img class="btn btnspecific btnreserve" item="54d7d4bd7951433cc665cffb" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3497815751">The Toy Tailor</span>, Level 85 Hat, on essentialeemish<br />
+	<img class="btn btnspecific btnreserve" item="54d7d4bd7951433cc665d007" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3463165544">The Toy Tailor</span>, Level 31 Hat, on essentialeemish<br />
+	<img class="btn btnspecific btnreserve" item="5540ec7c3c5b6144484a27d2" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2535250221">The Toy Tailor</span>, Level 54 Hat, on fearlessflowers<br />
+	<img class="btn btnspecific btnreserve" item="554ee4dd510ca17ece55f9d2" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3029873767">The Toy Tailor</span>, Level 36 Hat, on feignedfiction<br />
+	<img class="btn btnspecific btnreserve" item="55647ee82332703448271850" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3439840491">The Toy Tailor</span>, Level 43 Hat, on feignedfiction<br />
+	<img class="btn btnspecific btnreserve" item="5569e80c8f8ed698515417e1" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3247300977">The Toy Tailor</span>, Level 28 Hat, on formidablecenturion<br />
+	<img class="btn btnspecific btnreserve" item="55573b3f510ca17ece586ce2" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3017883327">The Toy Tailor</span>, Level 38 Hat, on fortunatefig<br />
+	<img class="btn btnspecific btnreserve" item="55571b43510ca17ece586215" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2655386862">The Toy Tailor</span>, Level 92 Hat, on gratefulgovernor<br />
+	<img class="btn btnspecific btnreserve" item="556b312d8f8ed698515496b5" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2186361917">The Toy Tailor</span>, Level 16 Hat, on gratefulgovernor<br />
+	<img class="btn btnspecific btnreserve" item="553a942d7951433cc685a784" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2941040578">The Toy Tailor</span>, Level 36 Hat, on guardedgiraffe<br />
+	<img class="btn btnspecific btnreserve" item="555b3528eaeead568bed25d7" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3748925080">The Toy Tailor</span>, Level 31 Hat, by VIP | CraZe | VIP, on guardedgiraffe<br />
+	<img class="btn btnspecific btnreserve" item="54c9831e7951433cc662248a" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3309748445">The Toy Tailor</span>, Level 64 Hat, by Max Payne, on hyperhog<br />
+	<img class="btn btnspecific btnreserve" item="54f288b27951433cc66e7ae8" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2235211022">The Toy Tailor</span>, Level 19 Hat, on hyperhog<br />
+	<img class="btn btnspecific btnreserve" item="556b47bf8f8ed6985154a363" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3155481329">The Toy Tailor</span>, Level 45 Hat, on injuriousicicle<br />
+	<img class="btn btnspecific btnreserve" item="550684b67951433cc674d77e" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3587376860">The Toy Tailor</span>, Hat, on inspirationalillusion<br />
+	<img class="btn btnspecific btnreserve" item="55541da2510ca17ece5778ac" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2548116643">The Toy Tailor</span>, Level 87 Hat, on inspirationalillusion<br />
+	<img class="btn btnspecific btnreserve" item="556c6ec58f8ed6985154f7ed" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3121053825">The Toy Tailor</span>, Level 74 Hat, on inspirationalillusion<br />
+	<img class="btn btnspecific btnreserve" item="55736a27c8414b91799bffdf" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3535999768">The Toy Tailor</span>, Level 26 Hat, by TheHiss, on inspirationalillusion<br />
+	<img class="btn btnspecific btnreserve" item="5539bcf97951433cc6856eaa" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3709627716">The Toy Tailor</span>, Level 77 Hat, by "TheCrazyY", on intimidatingfairy<br />
+	<img class="btn btnspecific btnreserve" item="554f0fb6510ca17ece560753" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3488721628">The Toy Tailor</span>, Level 64 Hat, on intimidatingfairy<br />
+	<img class="btn btnspecific btnreserve" item="557e13dcd7bb1ee9868da36b" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3289914335">The Toy Tailor</span>, Level 73 Hat, on intimidatingfairy<br />
+	<img class="btn btnspecific btnreserve" item="550646597951433cc674cc4d" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3502339772">The Toy Tailor</span>, Hat, by Dreamkiller, on invigoratingiguana<br />
+	<img class="btn btnspecific btnreserve" item="5530fabe7951433cc68281fa" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2959783531">The Toy Tailor</span>, Level 27 Hat, on invigoratingiguana<br />
+	<img class="btn btnspecific btnreserve" item="5553433c510ca17ece57361c" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2766858044">The Toy Tailor</span>, Level 11 Hat, on invigoratingiguana<br />
+	<img class="btn btnspecific btnreserve" item="552903e47951433cc67ff1ec" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2545193663">The Toy Tailor</span>, Level 56 Hat, on juvenilejellyfish<br />
+	<img class="btn btnspecific btnreserve" item="556727f3233270344827c3f3" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3266340828">The Toy Tailor</span>, Level 48 Hat, by 2Jon4Tron, on juvenilejellyfish<br />
+	<img class="btn btnspecific btnreserve" item="5564dd132332703448273669" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3799263231">The Toy Tailor</span>, Level 18 Hat, by Shogun Yao, on kickingkiller<br />
+	<img class="btn btnspecific btnreserve" item="53e566907951433cc629644d" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2842473890">The Toy Tailor</span>, Level 36 Hat, by AngryBurgers, on kindheartedknowledge<br />
+	<img class="btn btnspecific btnreserve" item="551c813e7951433cc67b8d3e" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2844555683">The Toy Tailor</span>, Level 26 Hat, on knowingkittens<br />
+	<img class="btn btnspecific btnreserve" item="5551b0db510ca17ece56d38b" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3500206307">The Toy Tailor</span>, Level 40 Hat, by Chilly Peppers, on knowingkittens<br />
+	<img class="btn btnspecific btnreserve" item="5565fb842332703448277a36" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2201832203">The Toy Tailor</span>, Level 52 Hat, on knowingkittens<br />
+	<img class="btn btnspecific btnreserve" item="54f3eaa47951433cc66f0b27" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2621351746">The Toy Tailor</span>, Level 3 Hat, on lastfan<br />
+	<img class="btn btnspecific btnreserve" item="554ac4b4510ca17ece54aa3b" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2176501200">The Toy Tailor</span>, Level 47 Hat, on lastfan<br />
+	<img class="btn btnspecific btnreserve" item="54db6bf07951433cc666ce01" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3516323119">The Toy Tailor</span>, Level 80 Hat, on lastlemon<br />
+	<img class="btn btnspecific btnreserve" item="5558f406510ca17ece59217c" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2959095035">The Toy Tailor</span>, Level 7 Hat, on lastlemon<br />
+	<img class="btn btnspecific btnreserve" item="556c254c8f8ed6985154e69a" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3721564241">The Toy Tailor</span>, Level 40 Hat, on lastlemon<br />
+	<img class="btn btnspecific btnreserve" item="5511d2907951433cc678308b" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2841286886">The Toy Tailor</span>, Level 18 Hat, on leapinglion<br />
+	<img class="btn btnspecific btnreserve" item="55588451510ca17ece58edc4" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2913496246">The Toy Tailor</span>, Level 7 Hat, on leapinglion<br />
+	<img class="btn btnspecific btnreserve" item="552373517951433cc67e1304" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3306136081">The Toy Tailor</span>, Level 92 Hat, on lethalninja<br />
+	<img class="btn btnspecific btnreserve" item="554fae6f510ca17ece5646a0" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3244911850">The Toy Tailor</span>, Level 16 Hat, on lethalninja<br />
+	<img class="btn btnspecific btnreserve" item="5553a2e8510ca17ece5753fd" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2184061763">The Toy Tailor</span>, Level 76 Hat, on lethalninja<br />
+	<img class="btn btnspecific btnreserve" item="54f8cd097951433cc67069d5" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3462167687">The Toy Tailor</span>, Level 4 Hat, on lighterlemur<br />
+	<img class="btn btnspecific btnreserve" item="555a16e9eaeead568becdcca" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3204883742">The Toy Tailor</span>, Level 36 Hat, on lighterlemur<br />
+	<img class="btn btnspecific btnreserve" item="552d70a57951433cc681782c" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3336968160">The Toy Tailor</span>, Level 66 Hat, on livingorange<br />
+	<img class="btn btnspecific btnreserve" item="553138a27951433cc6829bb5" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3479410452">The Toy Tailor</span>, Level 73 Hat, on majestictrout<br />
+	<img class="btn btnspecific btnreserve" item="5555b181510ca17ece57e495" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3692721947">The Toy Tailor</span>, Level 78 Hat, by Heisenberg, on majestictrout<br />
+	<img class="btn btnspecific btnreserve" item="551b124e7951433cc67b237b" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2742756474">The Toy Tailor</span>, Level 94 Hat, on maliciousghost<br />
+	<img class="btn btnspecific btnreserve" item="5544957be1a31049962fdda4" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3036384139">The Toy Tailor</span>, Level 47 Hat, on maliciousghost<br />
+	<img class="btn btnspecific btnreserve" item="556c9b628f8ed69851550604" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2224916566">The Toy Tailor</span>, Level 17 Hat, on maliciousghost<br />
+	<img class="btn btnspecific btnreserve" item="557984dad7bb1ee9868c2665" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2454958946">The Toy Tailor</span>, Level 3 Hat, on maliciousghost<br />
+	<img class="btn btnspecific btnreserve" item="55224d127951433cc67da87f" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3272744875">The Toy Tailor</span>, Level 22 Hat, on mammothmeasure<br />
+	<img class="btn btnspecific btnreserve" item="557f43ded7bb1ee9868df955" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3853361846">The Toy Tailor</span>, Level 72 Hat, by [DFS] Roope [FIN], on mammothmeasure<br />
+	<img class="btn btnspecific btnreserve" item="551c5d597951433cc67b8223" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2675049466">The Toy Tailor</span>, Level 88 Hat, on militarymachine<br />
+	<img class="btn btnspecific btnreserve" item="55235e667951433cc67e0d9d" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3502887938">The Toy Tailor</span>, Level 86 Hat, on militarymachine<br />
+	<img class="btn btnspecific btnreserve" item="5561f2dc23327034482653d6" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2977474878">The Toy Tailor</span>, Level 20 Hat, on nefariousnoise<br />
+	<img class="btn btnspecific btnreserve" item="54eb8d187951433cc66c51b1" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3541541602">The Toy Tailor</span>, Level 25 Hat, on overwhelmingelephant<br />
+	<img class="btn btnspecific btnreserve" item="550651037951433cc674ce4a" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3486984920">The Toy Tailor</span>, Hat, on pedanticpickle<br />
+	<img class="btn btnspecific btnreserve" item="54653fe77951433cc64b4726" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3063744985">The Toy Tailor</span>, Level 85 Hat, on perspectiveplatypus<br />
+	<img class="btn btnspecific btnreserve" item="54f26ead7951433cc66e7120" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2211701559">The Toy Tailor</span>, Level 64 Hat, on plausiblepopcorn<br />
+	<img class="btn btnspecific btnreserve" item="55572795510ca17ece586672" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3268732014">The Toy Tailor</span>, Level 70 Hat, on plausiblepopcorn<br />
+	<img class="btn btnspecific btnreserve" item="556661b423327034482799c6" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2968799649">The Toy Tailor</span>, Level 64 Hat, on pricelesspea<br />
+	<img class="btn btnspecific btnreserve" item="556caa818f8ed69851550a7f" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3807429589">The Toy Tailor</span>, Level 1 Hat, by Glooby, on principledpenguin<br />
+	<img class="btn btnspecific btnreserve" item="556bfbdb8f8ed6985154dd75" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3814467545">The Toy Tailor</span>, Level 86 Hat, by mister_sneeze, on provisionalpeanut<br />
+	<img class="btn btnspecific btnreserve" item="553135177951433cc68299d8" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3573607058">The Toy Tailor</span>, Level 4 Hat, on prudentlime<br />
+	<img class="btn btnspecific btnreserve" item="553135177951433cc68299e7" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3142502748">The Toy Tailor</span>, Level 34 Hat, on prudentlime<br />
+	<img class="btn btnspecific btnreserve" item="557108778f8ed69851564072" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3073813877">The Toy Tailor</span>, Level 97 Hat, on prudentlime<br />
+	<img class="btn btnspecific btnreserve" item="55663fe82332703448279009" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2992856167">The Toy Tailor</span>, Level 90 Hat, on punchypear<br />
+	<img class="btn btnspecific btnreserve" item="55477875510ca17ece53a9f1" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3739969961">The Toy Tailor</span>, Level 15 Hat, by [Pan]Naget, on pushingpanda<br />
+	<img class="btn btnspecific btnreserve" item="554eb86c510ca17ece55e99e" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2172710724">The Toy Tailor</span>, Level 68 Hat, on pushingpanda<br />
+	<img class="btn btnspecific btnreserve" item="556c77f58f8ed6985154faaf" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2542522871">The Toy Tailor</span>, Level 73 Hat, on pushingpanda<br />
+	<img class="btn btnspecific btnreserve" item="55781e27d7bb1ee9868bb734" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3135365494">The Toy Tailor</span>, Level 52 Hat, on pushingpanda<br />
+	<img class="btn btnspecific btnreserve" item="55469f06510ca17ece536f98" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3720483398">The Toy Tailor</span>, Level 10 Hat, by Bendthatdick Cuminbitch, on quizzicalquestion<br />
+	<img class="btn btnspecific btnreserve" item="555c01cceaeead568bed6357" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3135050587">The Toy Tailor</span>, Level 61 Hat, by dendenden, on quizzicalquestion<br />
+	<img class="btn btnspecific btnreserve" item="5451a6257951433cc6465ff1" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2885848920">The Toy Tailor</span>, Level 29 Hat, on rampantrainstorm<br />
+	<img class="btn btnspecific btnreserve" item="55143e0d7951433cc678e380" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3427845071">The Toy Tailor</span>, Level 57 Hat, on rampantrainstorm<br />
+	<img class="btn btnspecific btnreserve" item="552ad9e67951433cc680bc8d" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3276116732">The Toy Tailor</span>, Level 49 Hat, on rampantrainstorm<br />
+	<img class="btn btnspecific btnreserve" item="5571b4ad8f8ed69851566c2d" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3825318128">The Toy Tailor</span>, Level 8 Hat, by  idge   (Gabe), on rampantrainstorm<br />
+	<img class="btn btnspecific btnreserve" item="552bd0257951433cc681002f" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2973263767">The Toy Tailor</span>, Level 11 Hat, on raucousraisin<br />
+	<img class="btn btnspecific btnreserve" item="5571f5d18f8ed69851568675" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3202299835">The Toy Tailor</span>, Level 39 Hat, on raucousraisin<br />
+	<img class="btn btnspecific btnreserve" item="54bea5b77951433cc65fa1fe" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3333677924">The Toy Tailor</span>, Level 2 Hat, on remarkablerabbits<br />
+	<img class="btn btnspecific btnreserve" item="55456b9e510ca17ece52ee76" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3441435616">The Toy Tailor</span>, Level 88 Hat, on remarkablerabbits<br />
+	<img class="btn btnspecific btnreserve" item="54ea835b7951433cc66c085a" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3550232007">The Toy Tailor</span>, Level 53 Hat, by Qeezer, on screamingpineapple<br />
+	<img class="btn btnspecific btnreserve" item="5568f4c123327034482849d0" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3806996235">The Toy Tailor</span>, Level 32 Hat, by Cyrex, on screamingpineapple<br />
+	<img class="btn btnspecific btnreserve" item="54ca92587951433cc66255cc" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3469371802">The Toy Tailor</span>, Level 72 Hat, on silkyscience<br />
+	<img class="btn btnspecific btnreserve" item="5520769c7951433cc67cfa97" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2202567711">The Toy Tailor</span>, Level 91 Hat, on solidbeetle<br />
+	<img class="btn btnspecific btnreserve" item="552c8c7b7951433cc6813c91" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3491043212">The Toy Tailor</span>, Level 8 Hat, on spitefulspoon<br />
+	<img class="btn btnspecific btnreserve" item="556c9d738f8ed69851550690" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3297651447">The Toy Tailor</span>, Level 5 Hat, on spitefulspoon<br />
+	<img class="btn btnspecific btnreserve" item="556ce5858f8ed69851551cb9" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3496208332">The Toy Tailor</span>, Level 26 Hat, on squishedsmurf<br />
+	<img class="btn btnspecific btnreserve" item="5520c3897951433cc67d174e" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3223430100">The Toy Tailor</span>, Level 18 Hat, on steadfastspark<br />
+	<img class="btn btnspecific btnreserve" item="54d4e3697951433cc6646820" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3496270148">The Toy Tailor</span>, Level 11 Hat, on stealthshadow<br />
+	<img class="btn btnspecific btnreserve" item="54fa2deb7951433cc670dc39" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2758973415">The Toy Tailor</span>, Level 87 Hat, on stealthshadow<br />
+	<img class="btn btnspecific btnreserve" item="55569632510ca17ece583430" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3506429087">The Toy Tailor</span>, Level 82 Hat, on stingysanta<br />
+	<img class="btn btnspecific btnreserve" item="547b93467951433cc6500dd8" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3020966466">The Toy Tailor</span>, Level 23 Hat, on superiorspook<br />
+	<img class="btn btnspecific btnreserve" item="5513d39e7951433cc678c532" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3552497117">The Toy Tailor</span>, Level 9 Hat, on swelteringscarecrow<br />
+	<img class="btn btnspecific btnreserve" item="552eddd37951433cc681e25c" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2234103507">The Toy Tailor</span>, Level 57 Hat, on swelteringscarecrow<br />
+	<img class="btn btnspecific btnreserve" item="5549ef85510ca17ece546730" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3139334345">The Toy Tailor</span>, Level 34 Hat, on swelteringscarecrow<br />
+	<img class="btn btnspecific btnreserve" item="557c1ee8d7bb1ee9868cea64" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2193392894">The Toy Tailor</span>, Level 65 Hat, on taintedassassin<br />
+	<img class="btn btnspecific btnreserve" item="553427527951433cc683e3fc" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2554257089">The Toy Tailor</span>, Level 16 Hat, on talentedturtle<br />
+	<img class="btn btnspecific btnreserve" item="554b690a510ca17ece54cb6d" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3004876630">The Toy Tailor</span>, Level 52 Hat, on talentedturtle<br />
+	<img class="btn btnspecific btnreserve" item="5577596ad7bb1ee9868b844e" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3272499118">The Toy Tailor</span>, Level 31 Hat, on talentedturtle<br />
+	<img class="btn btnspecific btnreserve" item="54c642b37951433cc6617d4e" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3455480394">The Toy Tailor</span>, Level 89 Hat, on tangiblethunder<br />
+	<img class="btn btnspecific btnreserve" item="550f25067951433cc677794c" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2839092335">The Toy Tailor</span>, Level 46 Hat, on tangiblethunder<br />
+	<img class="btn btnspecific btnreserve" item="55605bf0d5f839fcf113ec63" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="2178528060">The Toy Tailor</span>, Level 93 Hat, on uptightumbrella<br />
+	<img class="btn btnspecific btnreserve" item="55579aa0510ca17ece589ab6" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3314247242">The Toy Tailor</span>, Level 17 Hat, on venerousvacation<br />
+	<img class="btn btnspecific btnreserve" item="556b3ca78f8ed69851549d30" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3812775591">The Toy Tailor</span>, Level 12 Hat, by DeezNuts, on venerousvacation<br />
+	<img class="btn btnspecific btnreserve" item="55776a18d7bb1ee9868b89af" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3395296394">The Toy Tailor</span>, Level 20 Hat, on venerousvacation<br />
+	<img class="btn btnspecific btnreserve" item="556477672332703448271683" align="center" src="/img/tf2wh-button-specific.png" width="40" height="16" alt="Specific" style="opacity: 1;" />  <span class="name" data-original-id="3211850671">The Toy Tailor</span>, Level 99 Hat, on wrathfulwrench<br />
+</p></div></div><!-- salebox-->
+
+<div style="float:right;">
+    <div id="itemframe" style="background-color: #3C352E; border: 4px solid #7D6D00;">
+        <span class="itemicon s128 i30327"></span>
+        <i id="itemprice" style="background: #7D6D00; display: inline-block;">3,500c<br /><small>(1.46 ref)</small></i>
+    </div>
+    <div class="buybox" style="text-align: center; float: left; margin-left: 5px;"><img id="buybutton" class="btn btnreserve" item="30327;6;2f6d4e2650ee315d7104c6943e04fda6" align="center" src="/img/tf2wh-button-buy-v2.png" style="opacity: 1;" width="120" height="48" alt="Buy" /><div id="countdown" style="width: 130px; font-size: 15px; margin-top: -12px;">Click to reserve</div></div>
+</div>
+
+<p id="buyinfo" style="display: none;"></p><div style="clear:both"></div>		</div>
+	</div>
+
+<div style="float:right;">
+	<div class="searchWrap">
+        <div class="find">
+                <form action="/items">
+                <input size="23" type="text" name="search" value="" /><input type="submit" value="Search" />
+                </form>
+        </div>
+	</div>
+	<div class="bannerside">
+		<script type="text/javascript">&lt;!--
+	google_ad_client = "ca-pub-1449473034001623";
+	/* tf2wh_med_sidebar */
+	google_ad_slot = "1976699507";
+	google_ad_width = 300;
+	google_ad_height = 250;
+	//--&gt;
+	</script>
+	<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+	</div>
+	<div class="warehouseAd">
+        <a href="/ultimate"><img src="/img/tf2wh-ultimatead.png" width="300" height="150" alt="Ultimate" /></a>
+	</div>
+	<div class="ticker" style="height: 2464px;">	<div id="chatqueue">
+		<h2>- Chat Queue<span id="pos"></span> -</h2>
+		<div id="bot_name"></div>
+        <div class="safeword" style="font: 11px verdana,helvetica,arial,sans-serif;">Your safeword is: <strong style="color: #1E3B63">VacationGold</strong> <a href="/?newsafeword=1"><img src="/img/reload.png" width="24" height="20" style="vertical-align: bottom" alt="Reload Safeword" /></a></div>
+		<table height="200" width="100%"><tbody><tr><td valign="bottom" class="chatcell">
+                <div id="chat">
+		<div class="msg msg_note">You have no new messages</div></div></td></tr></tbody></table>
+		<script type="text/javascript">
+		//&lt;![CDATA[
+$(function() {
+	var lastmsg = 0,
+		chatdiv = $("#chat"),
+		processing = false,
+		delayed = 0,
+		sdrate = 0;
+
+	function ajaxfailure() {
+		processing = false;
+	}
+
+	var bot_name = false;
+
+	function ajaxsuccess(data) {
+		processing = false;
+		sdrate++;
+
+		var oldid = lastmsg;
+		var list = data.messages.get;
+		for (var key in list) {
+			var obj = list[key];
+			if (obj.ts &gt; oldid) {
+				sdrate = 0;
+				var kids = chatdiv.children(),
+					len = kids.length;
+				while (len-- &gt; 35) {
+					var kid = $(kids[0]);
+					kid.remove();
+				}
+
+				var line = $("&lt;div&gt;&lt;/div&gt;"),
+					cpos = obj.message.indexOf(":"),
+					type = obj.message.substr(0, cpos),
+					text = obj.message.substr(cpos+1),
+					bots = {leapinglion: "76561198049572568", stealthshadow: "76561198049615070", superiorspook: "76561198049615010", maliciousghost: "76561198049570579", taintedassassin: "76561198049570439", lethalninja: "76561198049570201", punchypear: "76561198050360350", pedanticpickle: "76561198049602325", raucousraisin: "76561198049602279", livingorange: "76561198049914683", pricelesspea: "76561198049569823", fortunatefig: "76561198049565263", dervishdevil: "76561198049577280", principledpenguin: "76561198049576830", lastlemon: "76561198050405562", screamingpineapple: "76561198050393767", prudentlime: "76561198050405490", astonishingflames: "76561198049572574", beautifulbutterfly: "76561198049564447", overwhelmingelephant: "76561198049603157", majestictrout: "76561198049603887", formidablecenturion: "76561198049617266", intimidatingfairy: "76561198049604903", shockingshrimp: "76561198049617774", bizarreburger: "76561198049605011", solidbeetle: "76561198049572592", goofygorilla: "76561198049576022", maxshort: "76561198049565327", lastfan: "76561198049566349", gentlehelper: "76561198049582702", perniciouspencil: "76561198049614998", balefulballoon: "76561198049602177", damagingdrum: "76561198049615186", deadlydoctor: "76561198049615230", injuriousicicle: "76561198049616166", leathallunch: "76561198049623464", talentedturtle: "76561198049610491", nefariousnoise: "76561198066190432", spitefulspoon: "76561198066901870", villainousvisitor: "76561198066912582", wrathfulwrench: "76561198066912810", guardedgiraffe: "76561198071805778", fearlessflowers: "76561198071813236", juvenilejellyfish: "76561198071812172", kindheartedknowledge: "76561198071753415", quizzicalquestion: "76561198071713969", militarymachine: "76561198071762013", ancientairplane: "76561198071953723", rampantrainstorm: "76561198072289004", capablechicken: "76561198072250527", knowingkittens: "76561198072235169", undesirableunderwear: "76561198072211415", stingysanta: "76561198072287824", gratefulgovernor: "76561198072296484", vivaciousvolcano: "76561198072265857", willingwalrus: "76561198072235983", obsoleteoatmeal: "76561198072278259", uptightumbrella: "76561198073295789", whisperingwilderness: "76561198073244289", swelteringscarecrow: "76561198073262563", plausiblepopcorn: "76561198073375728", feignedfiction: "76561198073369054", idioticinsurance: "76561198073290611", mammothmeasure: "76561198073349092", hesitanthydrant: "76561198073295015", remarkablerabbits: "76561198073274411", silkyscience: "76561198073302729", colossalcabbage: "76561198073263413", tangiblethunder: "76561198073313545", marriedminister: "76561198073265127", supremestranger: "76561198073322488", hyperhog: "76561198073314475", apocalypticapple: "76561198073291329", bangingbanana: "76561198073359556", creepycarrot: "76561198073276085", squishedsmurf: "76561198073379792", kickingkiller: "76561198073338124", invigoratingiguana: "76561198073617726", provisionalpeanut: "76561198073636712", aliasalien: "76561198073562389", lighterlemur: "76561198073556097", vintagevine: "76561198073538917", pushingpanda: "76561198073582268", perspectiveplatypus: "76561198073584383", essentialeemish: "76561198073631396", venerousvacation: "76561198073627830", inspirationalillusion: "76561198073581050", launchingllama: "76561198073541583", steadfastspark: "76561198076643041", };
+				bot_name = (text.search("has been assigned to handle your trade.") &gt;= 0 || text.search("has sent a friend request") &gt;= 0) ? text.split(" ")[0] : bot_name;
+				if (bot_name) {$('#bot_name').html('Trading with: &lt;a href="steam://friends/add/'+bots[bot_name]+'"&gt;'+bot_name+'&lt;/a&gt;');}
+				if (text.search("You need to accept") &gt;= 0) {chatdiv.append('&lt;div class="msg msg_error"&gt;'+bot_name ? bot_name : 'Our bot'+' was unable to add you as a friend, please add them yourself, then trade again.&lt;br /&gt;&lt;a href="steam://friends/add/'+bots[bot_name]+'"&gt;'+bot_name+'&lt;/a&gt;&lt;/div&gt;');}
+				if (text.search("Cancelling trade") &gt;= 0 || text.search("Trade completed") &gt;= 0) {$('#bot_name').html('');}
+				line.text(text).addClass("msg msg_"+type);
+				var enc = line.html();
+				enc = enc.replace(/&amp;lt;profile:([^&amp;]+)&amp;gt;/, '&lt;a href="http://steamcommunity.com/id/$1"&gt;$1\'s Steam profile&lt;/a&gt;');
+				line.html(enc);
+
+				if (type == 'alert' &amp;&amp; oldid &gt; 0) {
+					var sound = readCookie('audio');
+					if (sound == null) sound = 'drumbeat';
+					if (sound != 'none') {
+						 playsound(sound);
+					}
+				}
+
+				chatdiv.append(line);
+				chatdiv[0].scrollTop = 50000;
+			}
+			if (obj.ts &gt; lastmsg) {
+				lastmsg = obj.ts;
+			}
+		}
+
+		var pos = data.messages.queueposition;
+		if (pos) {
+			$("#pos").text(" #" + pos);
+		}
+		else {
+			$("#pos").text("");
+		}
+
+		var reserved = data.messages.reserved;
+		if (reserved &amp;&amp; reserved &gt; 0) {
+			sdrate = 0;
+			$("#reserved").text(reserved).fadeIn();
+		}
+		else {
+			$("#reserved").text(0).fadeOut();
+		}
+
+		var credits = data.messages.credits;
+		window.available_credits = credits._credits;
+		if (credits) {
+			$("#userheld").text(credits._held + 'c');
+			$("#userbalance").text(credits._credits + 'c');
+			$("#donationFormHeading").html('You currently have ' + credits._credits + 'c');
+		}
+
+		var storeStatus = data.status;
+		var storeMessage = data.storemessage;
+		var needsStatus = false;
+		if (storeMessage &amp;&amp; storeStatus == 'online') storeStatus = 'message';
+
+		if (storeStatus) {
+			var curStatus = $("#statusBox").data('status');
+			if (storeStatus !== curStatus) {
+
+				if (storeStatus !== 'offline') {
+					$("#tradebox").fadeIn();
+				}
+				else {
+					$("#tradebox").fadeOut();
+				}
+
+				if (storeStatus === 'offline') {
+					$("#statusOffline").fadeIn('slow');
+					needsStatus = true;
+				}
+				else {
+					$("#statusOffline").fadeOut('slow');
+				}
+
+				if (storeStatus === 'full') {
+					$("#statusFull").fadeIn('slow');
+					needsStatus = true;
+				}
+				else {
+					$("#statusFull").fadeOut('slow');
+				}
+
+				if (storeStatus === 'message') {
+					needsStatus = true;
+				}
+
+				if (needsStatus) {
+					$("#statusBox").fadeIn('slow').removeClass().addClass('status-' + storeStatus);
+				}
+				else {
+					$("#statusBox").fadeOut('slow');
+				}
+				$("#statusBox").data('status',storeStatus);
+			}
+		}
+
+		var statusReason = data.statusreason,
+			statusReasonDiv = $('#statusReason div');
+		if (statusReason &amp;&amp; statusReason != statusReasonDiv.html()) {
+			statusReasonDiv.html(statusReason).css('margin-top', (($('#statusReason').height() - statusReasonDiv.outerHeight()) / 2));
+		}
+
+		var serverTime = data.messages.servertime;
+		if (!serverTime) serverTime = 1434570119;
+		if (serverTime &amp;&amp; serverTime &gt; 0 &amp;&amp; 'function' === typeof initbuy) {
+			initbuy(serverTime);
+			initbuy = false;
+		}
+
+		var iteminfo = data.iteminfo;
+		if (iteminfo &amp;&amp; 'function' === typeof procbuy) {
+			procbuy(iteminfo);
+		}
+	}
+
+	var active = 0;
+	function getNew() {
+		var now = +(new Date);
+		var delay = Math.min(Math.max(1, sdrate / 5 - 8), 30);
+		if (delayed &lt; delay) {
+			delayed++;
+			return;
+		}
+		delayed = 0;
+
+		if (processing) return;
+		processing = true;
+
+		var data = {
+			getmsg: lastmsg,
+			active: false
+		};
+
+		if (now - active &gt; 60000) {
+			data.active = true;
+			active = now;
+		}
+
+		if ('undefined' !== typeof itemdef) {
+			data.itemdef = itemdef;
+		}
+
+		$.ajax({
+			type: 'POST',
+			dataType: 'json',
+			contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+			xhrFields: {
+				withCredentials: true
+			},
+			crossDomain: true,
+			url: '//poll.tf2wh.com/ajaxw.php',
+			data: data,
+			success: ajaxsuccess,
+			error: ajaxfailure
+		});
+	}
+
+	setInterval(getNew, 5000);
+
+	ajaxsuccess({"commands":[],"messages":{"get":[{"message":"note:You have no new messages","ts":1434570119}],"reserved":0,"wanted":0,"credits":{"credits":47410,"invoiced":47410,"reserved":0,"wanted":0,"held":0,"pending":0,"_credits":"47,410","_invoiced":"47,410","_reserved":"0","_wanted":"0","_held":"0","_pend":"0","keys":0,"_keys":"0.0"}},"status":"online","state":{"online":true},"storemessage":true,"statusreason":"&lt;center&gt;Steam Summer Sale has begun! That means fun and games and Steam problems!&lt;br&gt;Your patience is appreciated.&lt;\/center&gt;","iteminfo":{"price":3500,"_price":"3,500","state":"reserve","message":"Click to reserve","available":121,"incoming":0}});
+
+	$(window).blur(function() {
+		if (sdrate &lt; 30) sdrate = 30;
+	}).focus(function() {
+		sdrate = 0;
+	});
+});
+//]]&gt;
+		</script>
+		<small><strong>Hint:</strong> Check your <a href="/backpack"><strong>backpack</strong></a> first before selling.</small><br />
+		<img align="right" class="btn" src="/img/tf2wh-audio.png" width="36" height="48" onclick="$('#audioprefs').toggle()" alt="Audio" />
+		<span id="tradebox">
+		    <div id="reserved" style="display: none; cursor: pointer;" onclick="document.location='/userdetail';">0</div><img id="btnTrade" class="btn btnsell btnTradeDisabled" src="/img/tf2wh-button-sell-v2.png" width="58" height="48" alt="Trade" /><img class="btn btncancel" src="/img/tf2wh-button-cancel-v2.png" width="62" height="48" alt="Cancel Trade" />
+		</span>
+
+		<div style="display:none" id="audioprefs">
+			<h3>Audio preferences</h3>
+			<ul>
+				<li style="background-color: #D29D44;" onclick="$('#audioprefs').hide(); playsound('drumbeat'); createCookie('audio', 'drumbeat', 3650);">Drum Beat</li>
+				<li style="background-color: #D29D44;" onclick="$('#audioprefs').hide(); playsound('orchestralstrings'); createCookie('audio', 'orchestralstrings', 3650);">Orchestal Strings</li>
+				<li style="background-color: #D29D44;" onclick="$('#audioprefs').hide(); playsound('chipmunk'); createCookie('audio', 'chipmunk', 3650);">Happy Chipmunk</li>
+				<li style="background-color: #D29D44;" onclick="$('#audioprefs').hide(); playsound('alert'); createCookie('audio', 'alert', 3650);">Virus! Alert</li>
+				<li style="background-color: #D29D44;" onclick="$('#audioprefs').hide(); createCookie('audio', 'none', 3650);">No sound</li>
+			</ul>
+		</div>
+		<br />
+		<br />
+		<a class="morelink" href="/itemfeed">Latest items</a>
+		<a class="morelink" href="/recent">Recent trades</a>
+	</div>
+	</div>
+	</div>
+
+	<div class="footer">
+		Disclaimer: This website is not related to Valve Corporation. Team Fortress 2, Steam and Valve are trademarks or registered trademarks of Valve Corporation. in the U.S. and/or other countries 
+		<a href="http://steampowered.com">Powered by Steam</a> 
+		<a href="http://forum.tf2wh.com/pages/terms/">Terms of Use</a> 
+		<a href="http://norganna.com/privacy.php">Privacy</a>
+	</div>
+	
+</div>
+<div id="ajax-alert">
+	<div id="ajax-alert-shim"></div>
+	<div id="ajax-alert-dialog">
+		<h2 id="ajax-alert-title">Title</h2>
+		<div id="ajax-alert-text" class="alert">Content</div>
+		<button onclick="$('#ajax-alert').hide();">Close</button>
+	</div>
+</div>
+<script type="text/javascript">
+//&lt;![CDATA[
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i &lt; ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+function eraseCookie(name) {
+	createCookie(name,"",-1);
+}
+
+function playsound(name) {
+	var myAudio = new Audio();
+	if (myAudio &amp;&amp; myAudio.canPlayType) {
+		$('#audio').children().remove();
+		$('#audio').append(myAudio);
+
+		if (myAudio.canPlayType('audio/ogg') != "") {
+			myAudio.src = '/sounds/'+name+'.ogg';
+			myAudio.load();
+			myAudio.play();
+			return
+		}
+		else if (myAudio.canPlayType('audio/mpeg') != "") {
+			myAudio.src = '/sounds/'+name+'.mp3';
+			myAudio.load();
+			myAudio.play();
+			return
+		}
+		else if (myAudio.canPlayType('audio/wav') != "") {
+			myAudio.src = '/sounds/'+name+'.wav';
+			myAudio.load();
+			myAudio.play();
+			return;
+		}
+	}
+}
+//]]&gt;
+</script>
+<div id="audio"></div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b592d4af42","applicationID":"7898246","transactionName":"MVxVZxFUWhdZAhBbCwgWYkEKGl0QXQxKQgwW","queueTime":0,"applicationTime":170,"atts":"HRtCEVlOSUgaAEYIHxtE","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}</script>
+
+</body></html>

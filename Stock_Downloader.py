@@ -1,152 +1,126 @@
-import urllib
-from collections import defaultdict
-class Item:
-    def __init__(self,name,link,credit,value,stock,price):
-
-        self._name = name
-        self._link = link
-        self._credit = credit
-        self._value = value
-        self._price = price
-        self._stock = stock
-
-
-    def __str__(self):
-        return ('{} ({})- credits: {}, price: {}, stock: {}\n'.format(
-                self._name,self._value, self._credit, self._price, self._stock))
-
-    def print_info(self):
-        return ('{} ({})- credits: {}, price: {}, stock: {}\n'.format(
-                self._name,self._value, self._credit, self._price, self._stock))
-
-    
-def separator(line):
-    p_line = line
-    line = line[line.find('e>')+2:]
-    item = line[:line.find('<td')]
-    line = line[line.find('<td'):]
-    return line, item
-
-def parser(line):
-
-    important = ''
-    if len(line) == 1:
-        relations = ''
-        if 'id=' in line[0]:
-            
-            name = line[0][line[0].find('id=')+4:line[0].find('class')-2]
-            
-            
-            line[0] = line[0][line[0].find('href=')+6:]
-            link = line[0][:line[0].find('class')-2]
-            important = (name,link)
-            
-        elif(line > 1):
-            line[0],Credit = separator(line[0])
-            Type = line[0][line[0].find('s=')+2:line[0].find('>')]
-       
-            
-            line[0],Stock = separator(line[0])
-            
-            line[0],Price = separator(line[0])
-            relations = (Credit,Type,Stock,Price)
-            
-        return important ,relations
-    
-        
-            
-    else:
-        turn = True
-        for thing in line:
-            
-            if turn:
-                
-                thing,Credit = separator(thing)
-                Type = thing[thing.find('s=')+2:thing.find('>')]
-                thing,Stock = separator(thing)
-                thing,Price = separator(thing)
-                turn = False
-                relations = (Credit,Type,Stock,Price)
-
-            else:
-               
-                name = thing[thing.find('id=')+4:thing.find('class')-2]
-                thing = thing[thing.find('href=')+6:]
-                link = thing[:thing.find('class')-2]
-                important = (name, link)
-        return important, relations
-def corrector(main,info):
-    x = []
-    y = []
-    for i in main:
-        if '>' in i:
-
-            i = i[i.find('>')+1:]
-        x.append(i)
-    for i in info:
-        if '>' in i:
-            i = i[i.find('>')+1:]
-        y.append(i)
-    main,info = tuple(x), tuple(y)
-    
-    return main, info
-
+from urllib import urlopen
+from BeautifulSoup import BeautifulSoup
+import unicodedata
+import sqlite3
+def translate(word):
+    name = unicodedata.normalize('NFKD',unicode(word,'utf-8'))
+    name = name.encode('ascii','ignore')
+    return name.strip()
 def stock_information():
-##    f = urllib.urlopen('http://www.tf2wh.com/priceguide')
-##
-##    content = f.read()
-##    w = open('Stock.txt','w')
-##
-##    w.write(content)
-##    w.close()
-##
-##    f.close()
+    webpage = urlopen("http://www.tf2wh.com/priceguide").read()
 
-    stock_file = open('Stock.txt','r')
-    html = stock_file.readlines()
-    
-    start = False
+    createDb = sqlite3.connect('hats.db')
+    queryCurs = createDb.cursor()
+    queryCurs.execute('''DROP TABLE hats''')
+    queryCurs.execute('''CREATE TABLE hats
+        (id INTEGER PRIMARY KEY, quality TEXT, url TEXT, name TEXT, quantity TEXT, buyRef FLOAT,
+        buyCredit INT, sellNormRef FLOAT, sellNormCred INT, sellDonatorRef FLOAT , sellDonatorCred INT)  ''')
 
-    information = ''
 
-    Prev_name = ()
-    list_misc = defaultdict(list)
-    Names = []
-    for line in html:
-        
-        if '<table id=pricelist width=100%>' in line:
-            start = True
-        if '</table>' in line:
-            start = False
-        if(start):
-            
-            information = line.strip().split('View on backpack.tf<tr>')
-            
-            Name , raw = parser(information)
-            
+    soup = BeautifulSoup(webpage)
 
-##                current_info.append(Prev_name[0])
-##                current_info.append(Prev_name[1])
-##                current_info.append(raw[0])
-##                current_info.append(raw[1])
-##                current_info.append(raw[2])
-##                current_info.append(raw[3])
-
-##                    list_misc.append(current_info)
-            if len(Prev_name) > 0 and len(raw)>0:
-                Prev_name, raw = corrector(Prev_name,raw)
+    table = soup.find('table')
+    for row in table.findAll('tr')[2:]:
+        information = []
+        col = row.findAll('td')
+        head = row.find('th')
+        parts = head.prettify().split('\n')
+        for part in parts:
+            if (part.startswith('<th') and not len(part) < 6):
+                information.append(translate(part[part.find('class="')+7:part.find('">')]))
                 
-                item = Item(Prev_name[0],Prev_name[1],raw[0],raw[1],raw[2],raw[3])
+            if(part.startswith('<a') and not len(part) < 5):
+
+                information.append(translate(part[part.find('href="')+6:part.find('" class')]))
                 
-                if raw[1] != 'base':
-                    list_misc[Prev_name[0]+' ('+raw[1]+')'].append(item)
-                    Names.append(Prev_name[0]+' ('+raw[1]+')')
+            if(part.find('<') == -1 or part.find('>')== -1):
+                if(part != ""):
+                    name = translate(part)
+
+        information.append(name)
+        if(len(col) > 0):
+            for cell in col:
+                
+                part = cell.prettify()
+                if(part.find('data') != -1):
+                    npart = part.split('\n')
+                    k = npart[0]
+
+                    k1 = k[k.find('sion="')+6:k.find(' ref">')]
+                    information.append(translate(k1))
+                text = cell.text.encode('ascii','ignore')
+                if(text != ''):
+                    
+                    information.append(translate(text))
+        try:
+            queryCurs.execute('''INSERT INTO hats (quality,url,name,quantity,buyRef,buyCredit,sellNormRef,sellNormCred,
+            sellDonatorRef,sellDonatorCred) VALUES (?,?,?,?,?,?,?,?,?,?)''',information)
+            
+        except:
+            print(information)
+    createDb.commit()
+    queryCurs.close()
+    print('Done')
+def quantity(url):
+    createDb = sqlite3.connect('hats.db')
+    queryCurs = createDb.cursor()
+    results = queryCurs.execute('SELECT quantity FROM hats WHERE url LIKE ?',('%'+url+'%',)).fetchall()
+    queryCurs.close()
+    return results[0][0]
+def name(url):
+    createDb = sqlite3.connect('hats.db')
+    queryCurs = createDb.cursor()
+    results = queryCurs.execute('SELECT name FROM hats WHERE url LIKE ?',('%'+url+'%',)).fetchall()
+    queryCurs.close()
+    return results[0][0]
+def find(hat):
+    createDb = sqlite3.connect('hats.db')
+    queryCurs = createDb.cursor()
+    results = queryCurs.execute('SELECT * FROM hats WHERE name LIKE ?',('%'+hat+'%',)).fetchall()
+    if len(results) == 0:
+        print('Hat/Misc not found')
+        return 0
+    if len(results) > 1:
+        print('Which one? ')
+        count = 0
+        for i in results:
+            if(i[1] !='base'):
+                print(str(count) + '.)' + i[3]+ " (" + i[1] + "), Quantity: " + str(i[4]) )
+            else:
+                print(str(count) + '.)' + i[3] + ", Quantity: " + str(i[4])) 
+            count +=1
+        num = -1
+        while True:
+            choice = raw_input("Number of hat/misc: ('q' to Quit) ")
+            if(choice == 'q'):
+                break
+            try:
+                num = eval(choice)
+                if(num < len(results) and num > -1):
+                    break
                 else:
-                    list_misc[Prev_name[0]].append(item)
-                    Names.append(Prev_name[0])
-            Prev_name = Name
-    return list_misc, Names
-##                current_info = []                
+                    print('Number not in range')
+            except:
+                print('Not a number')
+        if(num == -1):
+            return 0
+        result = results[num]
+    else:
+        result = results[0]
+
+    print('\n')
+    print(result[3])
+    print('\n')
+    queryCurs.close()
+    return result[2]
+
+##queryCurs.execute('SELECT * FROM hats')
+##for i in queryCurs:
+##    print('\n')
+##    for j in i:
+##        print j
             
-                
             
+            
+        
+   
